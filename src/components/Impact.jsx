@@ -12,7 +12,7 @@ const StatItem = ({ value, suffix, label, icon }) => {
       <div className="text-4xl mb-3">{icon}</div>
       <p className="font-serif text-5xl sm:text-6xl font-black text-white leading-none">
         {count}
-        <span className="text-pink-300">{suffix}</span>
+        <span className="text-pink-500">{suffix}</span>
       </p>
       <p className="text-purple-200 font-medium mt-2 text-sm uppercase tracking-wider">{label}</p>
     </div>
@@ -26,7 +26,7 @@ const TestimonialCard = ({ testimonial, active }) => (
       active ? 'opacity-100 scale-100' : 'opacity-0 scale-95 absolute inset-0 pointer-events-none'
     } bg-white rounded-3xl p-8 sm:p-10 shadow-2xl shadow-purple-100 max-w-2xl mx-auto`}
   >
-    <Quote size={36} className="text-pink-300 mb-6" />
+    <Quote size={36} className="text-pink-500 mb-6" />
     <p className="text-gray-700 text-lg sm:text-xl leading-relaxed font-light italic mb-8">
       "{testimonial.quote}"
     </p>
@@ -40,7 +40,7 @@ const TestimonialCard = ({ testimonial, active }) => (
         <p className="font-serif font-bold text-gray-900 text-lg">{testimonial.name}</p>
         <p className="text-sm text-gray-500">{testimonial.role}</p>
         <div className="flex items-center gap-1 mt-1">
-          <MapPin size={11} className="text-pink-400" />
+          <MapPin size={11} className="text-pink-500" />
           <span className="text-xs text-pink-500 font-medium">{testimonial.city}</span>
         </div>
       </div>
@@ -83,7 +83,7 @@ const Impact = () => {
 
         <div className="container-max px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-14 animate-on-scroll">
-            <span className="inline-block text-xs font-medium text-pink-300 uppercase tracking-widest mb-3">
+            <span className="inline-block text-xs font-medium text-pink-500 uppercase tracking-widest mb-3">
               Our Impact
             </span>
             <h2 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-4">

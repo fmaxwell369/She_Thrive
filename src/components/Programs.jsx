@@ -1,5 +1,6 @@
 import React from 'react'
 import ProgramCard from './ProgramCard'
+import WhatWeDo from './WhatWeDo';
 import { programs } from '../data'
 import Button from './Button'
 
@@ -11,6 +12,7 @@ const Programs = () => {
   }
 
   return (
+    <>
     <section id="programs" className="section-padding bg-gradient-to-b from-purple-50/60 to-white overflow-hidden">
       <div className="container-max">
 
@@ -51,6 +53,10 @@ const Programs = () => {
         </div>
       </div>
     </section>
+    
+    <WhatWeDo />
+</>
+    
   )
 }
 

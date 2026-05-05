@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import Button from './Button'
+
+
 import LogoPhoto from '../assets/logo.png'; 
 
 const navLinks = [
@@ -88,7 +90,7 @@ const Navbar = () => {
 
         {/* CTA */}
         <div className="hidden lg:flex items-center gap-3">
-          <Button
+          {/* <Button
             variant={scrolled ? 'primary' : 'white'}
             size="sm"
             onClick={(e) => {
@@ -98,7 +100,7 @@ const Navbar = () => {
             }}
           >
             Join Now
-          </Button>
+          </Button> */}
         </div>
 
         {/* Mobile hamburger */}

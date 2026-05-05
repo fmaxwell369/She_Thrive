@@ -1,0 +1,287 @@
+/* ─────────────────────────────────────────
+   WhatWeDo Section
+   ───────────────────────────────────────── */
+
+.wwd-section {
+  padding: 100px 24px;
+  background: #faf8f5;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background texture */
+.wwd-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(200, 135, 58, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 85% 75%, rgba(123, 94, 167, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* ── Header ── */
+.wwd-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 72px;
+}
+
+.wwd-eyebrow {
+  display: inline-block;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C8873A;
+  background: rgba(200, 135, 58, 0.1);
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+
+.wwd-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1310;
+  margin: 0 0 16px;
+}
+
+.wwd-title em {
+  font-style: italic;
+  color: #C8873A;
+}
+
+.wwd-subtitle {
+  font-size: 1.05rem;
+  color: #5a4a3a;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Grid ── */
+.wwd-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .wwd-grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .wwd-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+  }
+
+  /* Counseling spans full width on tablet */
+  .wwd-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 560px;
+    justify-self: center;
+  }
+}
+
+/* ── Card ── */
+.wwd-card {
+  position: relative;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+  /* Entrance animation */
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.55s ease var(--delay), transform 0.55s ease var(--delay),
+    box-shadow 0.35s ease;
+}
+
+.wwd-card.wwd-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wwd-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.1);
+}
+
+/* Colored left border accent */
+.wwd-card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 16px;
+  bottom: 16px;
+  width: 3px;
+  background: var(--accent);
+  border-radius: 0 4px 4px 0;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+.wwd-card:hover::after {
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+}
+
+.wwd-card-inner {
+  padding: 36px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Glow effect on hover */
+.wwd-glow {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0;
+  filter: blur(50px);
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.wwd-card:hover .wwd-glow {
+  opacity: 0.08;
+}
+
+/* ── Card Top ── */
+.wwd-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.wwd-tag {
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9a8a7a;
+}
+
+.wwd-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.wwd-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Card Content ── */
+.wwd-card-headline {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #1a1310;
+  margin: 0;
+}
+
+.wwd-card-desc {
+  font-size: 0.93rem;
+  color: #5a4a3a;
+  line-height: 1.75;
+  margin: 0;
+  flex: 1;
+}
+
+/* Audience line */
+.wwd-audience {
+  font-size: 0.78rem;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin: 0;
+  padding-top: 4px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.08);
+}
+
+/* Job categories badges */
+.wwd-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.wwd-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+  padding: 4px 12px;
+  border-radius: 100px;
+  letter-spacing: 0.04em;
+}
+
+/* Reassurance line */
+.wwd-reassurance {
+  font-size: 0.82rem;
+  color: #7B5EA7;
+  font-style: italic;
+  margin: 0;
+  padding: 10px 14px;
+  background: rgba(123, 94, 167, 0.06);
+  border-radius: 8px;
+  line-height: 1.5;
+}
+
+/* ── CTA ── */
+.wwd-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 11px 22px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  border-radius: 100px;
+  align-self: flex-start;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.wwd-cta svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s ease;
+}
+
+.wwd-cta:hover {
+  filter: brightness(1.1);
+  transform: translateX(2px);
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+.wwd-cta:hover svg {
+  transform: translateX(4px);
+}

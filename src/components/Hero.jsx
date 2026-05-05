@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import Button from './Button'
 import { ChevronDown } from 'lucide-react'
+import { useNavigate } from 'react-router-dom';
+
 
 /* ── Stats shown on the hero overlay ─────────────────────────── */
 const stats = [
@@ -60,22 +63,15 @@ const Hero = () => {
         <div className="max-w-3xl">
 
           {/* Badge */}
-          <div
-            ref={headingRef}
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-xs font-medium px-4 py-1.5 rounded-full mb-6"
-          >
-            <span className="w-2 h-2 bg-pink-400 rounded-full animate-pulse" />
-            NGO for Women Empowerment · Cameroon
-          </div>
 
           {/* Main headline */}
           <h1
             ref={subRef}
             className="font-serif text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-6"
           >
-            Empowering <span className="italic text-pink-300">Women.</span>
+            Empowering <span className="italic text-pink-500">Women.</span>
             <br />
-            Building <span className="italic text-pink-300">Nations.</span>
+            Building <span className="italic text-pink-500">Nations.</span>
           </h1>
 
           <p
@@ -83,8 +79,9 @@ const Hero = () => {
             className="text-lg sm:text-xl text-white/80 font-light leading-relaxed mb-10 max-w-xl"
           >
             A movement raised to restore, equip, and connect women
-            for lasting transformation. Though skills, faith, and community, 
-            SHE Thrive raises women who don't just survive, they thrive and build.
+            for lasting transformation. Though skills, faith, and community,
+
+            <span className="font-bold"> SHE </span> <span className='text-pink-500 font-bold'>Thrive</span>  raises women who don't just survive, they thrive and build.
           </p>
 
           {/* CTAs */}
@@ -97,18 +94,18 @@ const Hero = () => {
                 if (el) el.scrollIntoView({ behavior: 'smooth' })
               }}
             >
-              Join the Movement
+              Join The Movement
             </Button>
             <Button
               variant="secondary"
               size="lg"
               className="!border-white !text-white hover:!bg-white hover:!text-purple-800"
               onClick={() => {
-                const el = document.getElementById('get-involved')
+                const el = document.getElementById('events')
                 if (el) el.scrollIntoView({ behavior: 'smooth' })
               }}
             >
-              Explore our Programs
+              Register For Our Upcoming Events
             </Button>
           </div>
         </div>
@@ -120,7 +117,7 @@ const Hero = () => {
         >
           {stats.map(({ value, label }) => (
             <div key={label} className="text-white">
-              <p className="font-serif text-4xl font-bold text-pink-300">{value}</p>
+              <p className="font-serif text-4xl font-bold text-pink-500">{value}</p>
               <p className="text-white/70 text-sm mt-1 font-medium">{label}</p>
             </div>
           ))}

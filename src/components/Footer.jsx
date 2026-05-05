@@ -48,7 +48,7 @@ const Footer = () => {
                 <span className="text-white font-serif font-bold text-sm">ST</span>
               </div>
               <span className="font-serif font-bold text-xl">
-                SHE <span className="text-pink-400">Thrive</span>
+                SHE <span className="text-pink-500">Thrive</span>
               </span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-5">
@@ -79,7 +79,7 @@ const Footer = () => {
                   <Link
                     to={to}
                     onClick={(e) => handleAnchor(e, to)}
-                    className="text-white/60 hover:text-pink-400 text-sm transition-colors"
+                    className="text-white/60 hover:text-pink-500 text-sm transition-colors"
                   >
                     {label}
                   </Link>
@@ -94,7 +94,7 @@ const Footer = () => {
             <ul className="space-y-2.5">
               {programs.map((p) => (
                 <li key={p}>
-                  <a href="#programs" className="text-white/60 hover:text-pink-400 text-sm transition-colors">
+                  <a href="#programs" className="text-white/60 hover:text-pink-500 text-sm transition-colors">
                     {p}
                   </a>
                 </li>
@@ -107,15 +107,15 @@ const Footer = () => {
             <h4 className="font-serif font-bold text-lg mb-5">Contact</h4>
             <ul className="space-y-3">
               <li className="flex gap-2.5 items-start text-sm text-white/60">
-                <MapPin size={15} className="text-pink-400 mt-0.5 shrink-0" />
+                <MapPin size={15} className="text-pink-500 mt-0.5 shrink-0" />
                  Douala, Cameroon
               </li>
               <li className="flex gap-2.5 items-center text-sm text-white/60">
-                <Mail size={15} className="text-pink-400 shrink-0" />
+                <Mail size={15} className="text-pink-500 shrink-0" />
                 info@shethrive.org
               </li>
               <li className="flex gap-2.5 items-center text-sm text-white/60">
-                <Phone size={15} className="text-pink-400 shrink-0" />
+                <Phone size={15} className="text-pink-500 shrink-0" />
                 +237 650 69 00 59
               </li>
             </ul>
@@ -127,9 +127,9 @@ const Footer = () => {
       <div className="border-t border-white/10 py-5">
         <div className="container-max px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-white/40">
           <p>© {new Date().getFullYear()} SHE Thrive. All rights reserved.</p>
-          <p className="flex items-center gap-1">
+          {/* <p className="flex items-center gap-1">
             Made with <Heart size={13} className="text-pink-500 fill-pink-500 mx-0.5" /> for women across Africa
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>
