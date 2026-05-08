@@ -1,3 +1,13 @@
+import tes_1 from '../assets/tes_1.png';
+import test_2 from '../assets/test_2.png';
+import conf_1 from '../assets/conf_1.png';
+import conf_3 from '../assets/conf_3.png';
+import conf_7 from '../assets/conf_7.png';
+import conf_8 from '../assets/conf_8.png';
+import conf_5 from '../assets/conf_5.png';
+import conf_6 from '../assets/conf_6.png';
+
+
 /* ── Programs ─────────────────────────────────────────────────── */
 export const programs = [
   {
@@ -40,20 +50,20 @@ export const impactStats = [
 export const testimonials = [
   {
     id: 1,
-    name: 'Amina Ngo Bassa',
-    role: 'Empower HER Graduate · Owner of Amina Couture',
+    name: 'Stacy',
+    role: 'Empower HER Graduate · Owner of ENJECK FARMS',
     quote:
-      'Before SHE Thrive, I had the talent but no direction. After the program, I launched my own tailoring business and now employ three other women in my neighbourhood.',
-    image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&q=80',
-    city: 'Yaoundé',
+      "Through the business grant support program by She Thrive International, I received the support and encouragement I needed to turn my vision into reality. With the grant, I successfully launched ENJECK FARMS — a growing poultry business committed to providing accessible, high-quality, locally produced poultry products.I am deeply grateful to She Thrive International for believing in my dream and giving me the platform to build a sustainable future.",
+    image: tes_1,
+    city: 'Douala',
   },
   {
     id: 2,
-    name: 'Céleste Mbarga',
+    name: 'Maureen',
     role: 'Nation Builders Fellow · Community Health Advocate',
     quote:
-      'The Nation Builders program gave me a language for what I already felt — that women like me could lead. I now run monthly health education workshops for 80 women in my district.',
-    image: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=200&q=80',
+      "Dependence on external validation and the need for acceptance are psychological mechanisms in which self-esteem relies on the approval of others rather than on internal self-evaluation. Although it is natural to seek recognition, excessive dependence can become a major obstacle to personal growth and may reveal low self-esteem. Here is a detailed analysis of this phenomenon and how SHE thrive helped me to break free from it:1. Understanding Dependence on Validation e.g Feeling devastated by criticism, Making decisions based solely on other people’s opinions and Changing one’s behavior to please others.2. The Role of Acceptance3. How to Break Free from the Need for Validation- Practice self-validation, Identify your own values, Set boundaries, Mindfulness and Reduce the importance of social media",
+    image: test_2,
     city: 'Douala',
   },
   {
@@ -100,10 +110,10 @@ export const blogPosts = [
 
 /* ── Gallery images ───────────────────────────────────────────── */
 export const galleryImages = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=500&q=80', alt: 'Women in training workshop' },
-  { id: 2, src: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=500&q=80', alt: 'Leadership session' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1607748862156-7c548e7e98f4?w=500&q=80', alt: 'Sewing skills training' },
-  { id: 4, src: 'https://images.unsplash.com/photo-1556742044-3c52d6e88c62?w=500&q=80', alt: 'Graduation ceremony' },
-  { id: 5, src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&q=80', alt: 'Community meeting' },
-  { id: 6, src: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=500&q=80', alt: 'Mentor session' },
+  { id: 1, src: conf_1, alt: 'Women in training workshop' },
+  { id: 2, src: conf_3, alt: 'Leadership session' },
+  { id: 3, src: conf_7, alt: 'Sewing skills training' },
+  { id: 4, src: conf_8, alt: 'Graduation ceremony' },
+  { id: 5, src: conf_5, alt: 'Community meeting' },
+  { id: 6, src: conf_6, alt: 'Mentor session' },
 ]

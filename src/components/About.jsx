@@ -99,7 +99,7 @@ Built on the foundation of Isaiah 61:1–7, we are called to heal, equip, and ra
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-on-scroll">
           <div className="relative bg-gradient-to-br from-purple-700 to-purple-900 rounded-3xl p-8 sm:p-10 text-white overflow-hidden">
             <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-white/5 -translate-y-1/2 translate-x-1/2" />
-            <span className="inline-block text-xs font-medium text-purple-300 uppercase tracking-widest mb-4">
+            <span className="inline-block text-xs font-bold text-purple-300 uppercase tracking-widest mb-4">
               Our Vision
             </span>
             <h3 className="font-serif text-2xl sm:text-3xl font-bold mb-4 leading-snug">
@@ -113,7 +113,7 @@ Built on the foundation of Isaiah 61:1–7, we are called to heal, equip, and ra
 
           <div className="relative bg-gradient-to-br from-pink-500 to-pink-700 rounded-3xl p-8 sm:p-10 text-white overflow-hidden">
             <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-white/5 -translate-y-1/2 translate-x-1/2" />
-            <span className="inline-block text-xs font-medium text-pink-200 uppercase tracking-widest mb-4">
+            <span className="inline-block text-xs font-bold text-pink-200 uppercase tracking-widest mb-4">
               Our Mission
             </span>
             <h3 className="font-serif text-2xl sm:text-3xl font-bold mb-4 leading-snug">

@@ -4,6 +4,8 @@ import Button from './Button'
 import { ChevronDown } from 'lucide-react'
 import { useNavigate } from 'react-router-dom';
 
+import bg_photo from '../assets/about1.png'; 
+
 
 /* ── Stats shown on the hero overlay ─────────────────────────── */
 const stats = [
@@ -46,7 +48,7 @@ const Hero = () => {
       {/* Background image (placeholder gradient + pattern) */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=1600&q=80&auto=format"
+          src= {bg_photo}
           alt="African women empowerment"
           className="w-full h-full object-cover object-center"
           loading="eager"
