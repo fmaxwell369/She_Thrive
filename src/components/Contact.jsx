@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, MessageCircle, Send, CheckCircle } from 'lucide-re
 import Button from './Button'
 
 const offices = [
-  { city: 'Douala',  address: 'Makepe, Rhome poulin', phone: '+237 650 69 00 59', email: 'douala@shethrive.org' },
+  { city: 'Douala',  address: 'Makepe, Carrefour Rhome poulenc', phone: '+237 650 69 00 59', email: 'douala@shethrive.org' },
 ]
 
 const Contact = () => {
@@ -84,7 +84,7 @@ const Contact = () => {
                 <Button variant="secondary" size="sm" className="mt-6" onClick={() => setSent(false)}>Send Another</Button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form action="https://formsubmit.co/maxwellfonou@gmail.com" method="POST" className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-xs font-medium text-gray-600 mb-1.5">Full Name *</label>

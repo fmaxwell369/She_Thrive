@@ -7,25 +7,25 @@ const events = [
   {
     id: 1,
     title: 'REGISTRATION SHE THRIVE CONFERENCE (English)',
-    date: 'May 7, 2026',
-    time: '9:00 AM – 5:00 PM',
+    date: 'May 17, 2026',
+    time: '1:00 AM – 5:00 PM',
     location: 'Doula',
     category: 'Summit',
     description:
       '7 powerful voices. 7 transformational sessions. Can you guess who they are ? Stay tuned... the reveal begins soon.',
-    spots: 50,
+    // spots: 50,
     color: 'purple',
   },
   {
     id: 2,
     title: 'ENREGISTREMENT CONFERENCE SHE THRIVE',
-    date: 'MAY 7, 2026',
-    time: '9:00 AM – :500 PM',
+    date: 'MAY 17, 2026',
+    time: '1:00 AM – :500 PM',
     location: 'Douala ',
     category: 'Summit',
     description:
       '7 voix puissantes. 7 sessions transfomatrices. pouvez-vous deviner qui elles sont ? Restez connectes... les revelations commencent bientot.',
-    spots: 50,
+    // spots: 50,
     color: 'pink',
   },
   // {
