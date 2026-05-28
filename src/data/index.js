@@ -11,72 +11,78 @@ import conf_6 from '../assets/conf_6.png';
 /* ── Programs ─────────────────────────────────────────────────── */
 export const programs = [
   {
-    id: 1,
-    slug: 'empower-her',
-    title: 'Empower HER',
-    tagline: 'Equipping Women with Skills for Life and Income.',
-    description:
-      'Empower HER is the practical empowerment arm of SHE Thrive focused on training, equipping, and activating women.',
-    audience: 'Women ready to grow, earn, and build a better future.',
-    icon: '✦',
-    color: 'purple',
-    outcomes: ['Skills acquisition programs', 'Business & Entrepreneurship training', 'Workshops and Conferences', 'Personal development Sessions'],
+    id: 'empower-her',
+    titleKey: 'programs.items.empower_her.title',
+    taglineKey: 'programs.items.empower_her.tagline',
+    descKey: 'programs.items.empower_her.desc',
+    audienceKey: 'programs.items.empower_her.audience',
+    // Tableau de clés pour i18next
+    outcomesKeys: [
+      'programs.items.empower_her.outcomes.0',
+      'programs.items.empower_her.outcomes.1',
+      'programs.items.empower_her.outcomes.2',
+      'programs.items.empower_her.outcomes.3'
+    ],
+    
     image: 'https://images.unsplash.com/photo-1607748862156-7c548e7e98f4?w=600&q=80',
+    color: 'purple',
+    icon: '✦',
   },
-  {
-    id: 2,
+  {    
+    id: 'nation-builders',
+    titleKey: 'programs.items.nation_builders.title',
+    descKey: 'programs.items.nation_builders.desc',
     slug: 'nation-builders',
-    title: 'Nation Builders',
-    tagline: 'Raising a Strong Community of Women Who Stand Together.',
-    description:
-      'Nation Builders is the heart and community arm of SHE Thrive — a safe, supportive space where women grow spiritually and emotionally together.',
-    audience: 'Women who need support, healing, connection, and spiritual growth.',
+    taglineKey: 'programs.items.nation_builders.tagline',
+    audienceKey: 'programs.items.nation_builders.audience',
+    
+    outcomesKeys: [
+      'programs.items.nation_builders.outcomes.0',
+      'programs.items.nation_builders.outcomes.1',
+      'programs.items.nation_builders.outcomes.2',
+      'programs.items.nation_builders.outcomes.3'
+    ],
+    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80',
     icon: '◆',
     color: 'pink',
-    outcomes: ['Prayer and spiritual support systems', 'Counseling and mentorship', 'Community groups and accountability circles', 'Emotional and life support',],
-    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80',
   },
 ]
 
 /* ── Impact stats ─────────────────────────────────────────────── */
 export const impactStats = [
-  { value: 500,  suffix: '+', label: 'Women Trained',      icon: '👩‍🎓' },
-  { value: 100,  suffix: '+', label: 'Businesses Started',  icon: '🏪' },
-  { value: 3,    suffix: '+', label: 'Cities Reached',      icon: '🏙️' },
-  { value: 95,   suffix: '%', label: 'Completion Rate',     icon: '🎯' },
-]
+  { value: 500, suffix: '+', labelKey: 'impact.labels.trained', icon: '👩‍🎓' },
+  { value: 100, suffix: '+', labelKey: 'impact.labels.businesses', icon: '💼' },
+  { value: 3,   suffix: '+', labelKey: 'impact.labels.cities', icon: '📍' },
+  { value: 98,  suffix: '%', labelKey: 'impact.labels.satisfaction', icon: '✨' },
+];
 
 /* ── Testimonials ─────────────────────────────────────────────── */
 export const testimonials = [
   {
     id: 1,
     name: 'Stacy',
-    role: 'Empower HER Graduate · Owner of ENJECK FARMS',
-    quote:
-      "Through the business grant support program by She Thrive International, I received the support and encouragement I needed to turn my vision into reality. With the grant, I successfully launched ENJECK FARMS — a growing poultry business committed to providing accessible, high-quality, locally produced poultry products.I am deeply grateful to She Thrive International for believing in my dream and giving me the platform to build a sustainable future.",
+    roleKey: 'impact.quotes.roles.stacy',      
+    quoteKey: 'impact.quotes.testimonial_1',    
     image: tes_1,
-    city: 'Douala',
+    city: 'impact.quotes.cities.douala',
   },
   {
     id: 2,
     name: 'Maureen',
-    role: 'Nation Builders Fellow · Community Health Advocate',
-    quote:
-      "Dependence on external validation and the need for acceptance are psychological mechanisms in which self-esteem relies on the approval of others rather than on internal self-evaluation. Although it is natural to seek recognition, excessive dependence can become a major obstacle to personal growth and may reveal low self-esteem. Here is a detailed analysis of this phenomenon and how SHE thrive helped me to break free from it:1. Understanding Dependence on Validation e.g Feeling devastated by criticism, Making decisions based solely on other people’s opinions and Changing one’s behavior to please others.2. The Role of Acceptance3. How to Break Free from the Need for Validation- Practice self-validation, Identify your own values, Set boundaries, Mindfulness and Reduce the importance of social media",
+    roleKey: 'impact.quotes.roles.maureen',     
+    quoteKey: 'impact.quotes.testimonial_2',    
     image: test_2,
-    city: 'Douala',
+    city: 'impact.quotes.cities.douala',
   },
   {
     id: 3,
     name: 'Patience Eboule',
-    role: 'Empower HER Graduate · Digital Entrepreneur',
-    quote:
-      'I went from selling snacks to running an online boutique with customers across Cameroon. SHE Thrive didn\'t just train me — they believed in me when I didn\'t believe in myself.',
-    image: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=200&q=80',
-    city: 'Bafoussam',
+    roleKey: 'impact.quotes.roles.patience',
+    quoteKey: 'impact.quotes.testimonial_3',    
+    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80',
+    city: 'impact.quotes.cities.bafoussam',
   },
-]
-
+];
 /* ── Blog posts ───────────────────────────────────────────────── */
 export const blogPosts = [
   {

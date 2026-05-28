@@ -1,20 +1,13 @@
 import React, { useEffect, useRef } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next' // Importation du hook i18n
 import Button from './Button'
 import { ChevronDown } from 'lucide-react'
-import { useNavigate } from 'react-router-dom';
 
-import bg_photo from '../assets/about1.png'; 
-
-
-/* ── Stats shown on the hero overlay ─────────────────────────── */
-const stats = [
-  { value: '500+', label: 'Women Trained' },
-  { value: '100+', label: 'Businesses Started' },
-  { value: '3+',   label: 'Cities Reached' },
-]
+import bg_photo from '../assets/about1.png'
 
 const Hero = () => {
+  const { t } = useTranslation() // Initialisation du hook
+
   const headingRef = useRef(null)
   const subRef     = useRef(null)
   const btnRef     = useRef(null)
@@ -42,13 +35,20 @@ const Hero = () => {
     if (el) el.scrollIntoView({ behavior: 'smooth' })
   }
 
+  /* Définition des stats à l'intérieur pour appliquer les traductions */
+  const stats = [
+    { value: '500+', label: t('hero.stats.trained') },
+    { value: '100+', label: t('hero.stats.businesses') },
+    { value: '3+',   label: t('hero.stats.cities') },
+  ]
+
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
 
-      {/* Background image (placeholder gradient + pattern) */}
+      {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src= {bg_photo}
+          src={bg_photo}
           alt="African women empowerment"
           className="w-full h-full object-cover object-center"
           loading="eager"
@@ -64,26 +64,25 @@ const Hero = () => {
       <div className="relative z-10 container-max px-4 sm:px-6 lg:px-8 pt-28 pb-20">
         <div className="max-w-3xl">
 
-          {/* Badge */}
-
           {/* Main headline */}
           <h1
             ref={subRef}
             className="font-serif text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-6"
           >
-            Empowering <span className="italic text-pink-500">Women.</span>
+            {t('hero.title_part1')}<span className="italic text-pink-500">{t('hero.title_span1')}</span>
             <br />
-            Building <span className="italic text-pink-500">Nations.</span>
+            {t('hero.title_part2')}<span className="italic text-pink-500">{t('hero.title_span2')}</span>
           </h1>
 
+          {/* Description */}
           <p
             ref={btnRef}
             className="text-lg sm:text-xl text-white/80 font-light leading-relaxed mb-10 max-w-xl"
           >
-            A movement raised to restore, equip, and connect women
-            for lasting transformation. Though skills, faith, and community,
-
-            <span className="font-bold"> SHE </span> <span className='text-pink-500 font-bold'>Thrive</span>  raises women who don't just survive, they thrive and build.
+            {t('hero.description_part1')}
+            <span className="font-bold">{t('hero.description_span1')}</span>
+            <span className="text-pink-500 font-bold">{t('hero.description_span2')}</span>
+            {t('hero.description_part2')}
           </p>
 
           {/* CTAs */}
@@ -96,7 +95,7 @@ const Hero = () => {
                 if (el) el.scrollIntoView({ behavior: 'smooth' })
               }}
             >
-              Join The Movement
+              {t('hero.btn_movement')}
             </Button>
             <Button
               variant="secondary"
@@ -107,7 +106,7 @@ const Hero = () => {
                 if (el) el.scrollIntoView({ behavior: 'smooth' })
               }}
             >
-              Register For Our Upcoming Events
+              {t('hero.btn_events')}
             </Button>
           </div>
         </div>

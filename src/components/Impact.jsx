@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next' 
 import { Quote, ChevronLeft, ChevronRight, MapPin, Star } from 'lucide-react'
 import { impactStats, testimonials } from '../data'
 import useCountUp from './useCountUp'
 
 /* ── Single animated stat ─────────────────────────────────────── */
-const StatItem = ({ value, suffix, label, icon }) => {
+const StatItem = ({ value, suffix, labelKey, icon }) => {
+  const { t } = useTranslation()
   const { ref, count } = useCountUp(value)
 
   return (
@@ -14,48 +16,56 @@ const StatItem = ({ value, suffix, label, icon }) => {
         {count}
         <span className="text-pink-500">{suffix}</span>
       </p>
-      <p className="text-purple-200 font-medium mt-2 text-sm uppercase tracking-wider">{label}</p>
+      {/* Traduction dynamique du label */}
+      <p className="text-purple-200 font-medium mt-2 text-sm uppercase tracking-wider">{t(labelKey)}</p>
     </div>
   )
 }
 
 /* ── Testimonial card ─────────────────────────────────────────── */
-const TestimonialCard = ({ testimonial, active }) => (
-  <div
-    className={`transition-all duration-500 ${
-      active ? 'opacity-100 scale-100' : 'opacity-0 scale-95 absolute inset-0 pointer-events-none'
-    } bg-white rounded-3xl p-8 sm:p-10 shadow-2xl shadow-purple-100 max-w-2xl mx-auto`}
-  >
-    <Quote size={36} className="text-pink-500 mb-6" />
-    <p className="text-gray-700 text-lg sm:text-xl leading-relaxed font-light italic mb-8">
-      "{testimonial.quote}"
-    </p>
-    <div className="flex items-center gap-4">
-      <img
-        src={testimonial.image}
-        alt={testimonial.name}
-        className="w-14 h-14 rounded-full object-cover ring-4 ring-pink-100"
-      />
-      <div>
-        <p className="font-serif font-bold text-gray-900 text-lg">{testimonial.name}</p>
-        <p className="text-sm text-gray-500">{testimonial.role}</p>
-        <div className="flex items-center gap-1 mt-1">
-          <MapPin size={11} className="text-pink-500" />
-          <span className="text-xs text-pink-500 font-medium">{testimonial.city}</span>
+const TestimonialCard = ({ testimonial, active }) => {
+  const { t } = useTranslation()
+  
+  return (
+    <div
+      className={`transition-all duration-500 ${
+        active ? 'opacity-100 scale-100' : 'opacity-0 scale-95 absolute inset-0 pointer-events-none'
+      } bg-white rounded-3xl p-8 sm:p-10 shadow-2xl shadow-purple-100 max-w-2xl mx-auto`}
+    >
+      <Quote size={36} className="text-pink-500 mb-6" />
+      {/* Traduction dynamique du témoignage */}
+      <p className="text-gray-700 text-lg sm:text-xl leading-relaxed font-light italic mb-8">
+        "{t(testimonial.quoteKey)}"
+      </p>
+      <div className="flex items-center gap-4">
+        <img
+          src={testimonial.image}
+          alt={testimonial.name}
+          className="w-14 h-14 rounded-full object-cover ring-4 ring-pink-100"
+        />
+        <div>
+          <p className="font-serif font-bold text-gray-900 text-lg">{testimonial.name}</p>
+          {/* Traduction dynamique du rôle */}
+          <p className="text-sm text-gray-500">{t(testimonial.roleKey)}</p>
+          <div className="flex items-center gap-1 mt-1">
+            <MapPin size={11} className="text-pink-500" />
+            <span className="text-xs text-pink-500 font-medium">{t(testimonial.city)}</span>
+          </div>
+        </div>
+        {/* Stars */}
+        <div className="ml-auto flex gap-0.5">
+          {[...Array(5)].map((_, i) => (
+            <Star key={i} size={14} className="text-amber-400 fill-amber-400" />
+          ))}
         </div>
       </div>
-      {/* Stars */}
-      <div className="ml-auto flex gap-0.5">
-        {[...Array(5)].map((_, i) => (
-          <Star key={i} size={14} className="text-amber-400 fill-amber-400" />
-        ))}
-      </div>
     </div>
-  </div>
-)
+  )
+}
 
 /* ── Main section ─────────────────────────────────────────────── */
 const Impact = () => {
+  const { t } = useTranslation() // 2. Initialisation du hook principal
   const [active, setActive] = useState(0)
 
   const prev = () => setActive((a) => (a === 0 ? testimonials.length - 1 : a - 1))
@@ -84,19 +94,19 @@ const Impact = () => {
         <div className="container-max px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-14 animate-on-scroll">
             <span className="inline-block text-xs font-medium text-pink-500 uppercase tracking-widest mb-3">
-              Our Impact
+              {t('impact.stats_top_label')}
             </span>
             <h2 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-4">
-              Numbers That Tell Our Story
+              {t('impact.stats_title')}
             </h2>
             <p className="text-purple-200 max-w-lg mx-auto">
-              Behind every number is a woman whose life has been transformed.
+              {t('impact.stats_subtitle')}
             </p>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 animate-on-scroll">
             {impactStats.map((stat) => (
-              <StatItem key={stat.label} {...stat} />
+              <StatItem key={stat.labelKey} {...stat} />
             ))}
           </div>
         </div>
@@ -108,13 +118,13 @@ const Impact = () => {
 
           <div className="text-center mb-14 animate-on-scroll">
             <span className="inline-block text-xs font-medium text-pink-600 uppercase tracking-widest mb-3">
-              Voices of SHE Thrive
+              {t('impact.testi_top_label')}
             </span>
             <h2 className="font-serif text-4xl sm:text-5xl font-bold text-purple-950 mb-4">
-              Stories of Transformation
+              {t('impact.testi_title')}
             </h2>
             <p className="text-gray-500 max-w-lg mx-auto">
-              Hear directly from the women whose lives have been changed by our programs.
+              {t('impact.testi_subtitle')}
             </p>
           </div>
 

@@ -1,14 +1,15 @@
 import React, { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next'; // 1. Importation du hook
 import './WhatWeDo.css';
 
 const services = [
   {
     id: 'consulting',
-    tag: '01 / Consulting & Coaching',
-    headline: 'Build, Lead, and Scale with Clarity',
-    description: "Business consulting, leadership coaching, financial guidance, and personal development — all designed to move you from where you are to where you're meant to be.",
-    audience: 'Entrepreneurs · Women Leaders · Startups · NGOs',
-    cta: 'Book a Strategy Session',
+    tagKey: 'whatwedo.services.consulting.tag',
+    headlineKey: 'whatwedo.services.consulting.headline',
+    descriptionKey: 'whatwedo.services.consulting.description',
+    audienceKey: 'whatwedo.services.consulting.audience',
+    ctaKey: 'whatwedo.services.consulting.cta',
     href: '/#contact',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -21,12 +22,16 @@ const services = [
   },
   {
     id: 'jobs',
-    tag: '02 / Thrive Jobs',
-    headline: 'Access Opportunities That Change Your Life',
-    description:
-      'Connect to verified job offers, internships, and skill-based gigs through our curated network and placement programs.',
-    categories: ['Jobs', 'Internships', 'Skill-based Gigs'],
-    cta: 'Explore Opportunities',
+    tagKey: 'whatwedo.services.jobs.tag',
+    headlineKey: 'whatwedo.services.jobs.headline',
+    descriptionKey: 'whatwedo.services.jobs.description',
+    // Tableau de clés de traduction pour gérer proprement l'asymétrie des badges
+    categoriesKeys: [
+      'whatwedo.services.jobs.categories.jobs',
+      'whatwedo.services.jobs.categories.internships',
+      'whatwedo.services.jobs.categories.gigs'
+    ],
+    ctaKey: 'whatwedo.services.jobs.cta',
     href: '/events',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,12 +44,11 @@ const services = [
   },
   {
     id: 'counseling',
-    tag: '03 / Counseling & Prayers',
-    headline: 'Emotional Support & Spiritual Guidance',
-    description:
-      "One-on-one counseling, life guidance, and prayer support for women and individuals navigating life's hardest moments.",
-    reassurance: 'Confidential. Compassionate. Judgment-free.',
-    cta: 'Request a Session',
+    tagKey: 'whatwedo.services.counseling.tag',
+    headlineKey: 'whatwedo.services.counseling.headline',
+    descriptionKey: 'whatwedo.services.counseling.description',
+    reassuranceKey: 'whatwedo.services.counseling.reassurance',
+    ctaKey: 'whatwedo.services.counseling.cta',
     href: '/#contact',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,6 +61,7 @@ const services = [
 ];
 
 export default function WhatWeDo() {
+  const { t } = useTranslation(); // 2. Initialisation d'i18n
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -80,13 +85,12 @@ export default function WhatWeDo() {
     <section className="wwd-section" id="programs" ref={sectionRef}>
       {/* Section Header */}
       <div className="wwd-header">
-        <span className="wwd-eyebrow">What We Do</span>
+        <span className="wwd-eyebrow">{t('whatwedo.eyebrow')}</span>
         <h2 className="wwd-title">
-          Three Pillars of <em>Transformation</em>
+          {t('whatwedo.title_main')}<em>{t('whatwedo.title_italic')}</em>
         </h2>
         <p className="wwd-subtitle">
-          Every service we offer is built around one conviction: women thrive when
-          they have the right support at the right time.
+          {t('whatwedo.subtitle')}
         </p>
       </div>
 
@@ -101,40 +105,40 @@ export default function WhatWeDo() {
             <div className="wwd-card-inner">
               {/* Top bar */}
               <div className="wwd-card-top">
-                <span className="wwd-tag">{service.tag}</span>
+                <span className="wwd-tag">{t(service.tagKey)}</span>
                 <div className="wwd-icon" style={{ color: service.accent }}>
                   {service.icon}
                 </div>
               </div>
 
               {/* Content */}
-              <h3 className="wwd-card-headline">{service.headline}</h3>
-              <p className="wwd-card-desc">{service.description}</p>
+              <h3 className="wwd-card-headline">{t(service.headlineKey)}</h3>
+              <p className="wwd-card-desc">{t(service.descriptionKey)}</p>
 
               {/* Audience */}
-              {service.audience && (
-                <p className="wwd-audience">{service.audience}</p>
+              {service.audienceKey && (
+                <p className="wwd-audience">{t(service.audienceKey)}</p>
               )}
 
               {/* Job categories */}
-              {service.categories && (
+              {service.categoriesKeys && (
                 <div className="wwd-categories">
-                  {service.categories.map((cat) => (
-                    <span className="wwd-badge" key={cat}>
-                      {cat}
+                  {service.categoriesKeys.map((catKey) => (
+                    <span className="wwd-badge" key={catKey}>
+                      {t(catKey)}
                     </span>
                   ))}
                 </div>
               )}
 
               {/* Reassurance */}
-              {service.reassurance && (
-                <p className="wwd-reassurance">🔒 {service.reassurance}</p>
+              {service.reassuranceKey && (
+                <p className="wwd-reassurance">🔒 {t(service.reassuranceKey)}</p>
               )}
 
               {/* CTA */}
               <a href={service.href} className="wwd-cta">
-                {service.cta}
+                {t(service.ctaKey)}
                 <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>

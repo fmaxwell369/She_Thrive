@@ -1,24 +1,27 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import LanguageSwitcher from './LanguageSwitcher'
 import { Menu, X } from 'lucide-react'
 import Button from './Button'
 
+import LogoPhoto from '../assets/logo.png'
 
-import LogoPhoto from '../assets/logo.png'; 
 
 const navLinks = [
-  { label: 'Home',          to: '/' },
-  { label: 'About',         to: '/#about' },
-  { label: 'Programs',      to: '/#programs' },
-  { label: 'Impact',        to: '/#impact' },
-  { label: 'Get Involved',  to: '/#get-involved' },
-  { label: 'Events',        to: '/events' },
-  { label: 'Contact',       to: '/#contact' },
+  { labelKey: 'navbar.links.home',         to: '/' },
+  { labelKey: 'navbar.links.about',        to: '/#about' },
+  { labelKey: 'navbar.links.programs',     to: '/#programs' },
+  { labelKey: 'navbar.links.impact',       to: '/#impact' },
+  { labelKey: 'navbar.links.get_involved', to: '/#get-involved' },
+  { labelKey: 'navbar.links.events',       to: '/events' },
+  { labelKey: 'navbar.links.contact',      to: '/#contact' },
 ]
 
 const Navbar = () => {
-  const [scrolled,    setScrolled]    = useState(false)
-  const [menuOpen,    setMenuOpen]    = useState(false)
+  const { t } = useTranslation() // 2. Initialisation du hook de traduction
+  const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
 
   useEffect(() => {
@@ -56,37 +59,39 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-4 group">
           <div className="w-14 h-14 rounded-full overflow-hidden shadow-md flex items-center justify-center border border-white/20">
-           <img 
-               src={LogoPhoto} 
-               alt="SHE Thrive Logo" 
-                className="w-full h-full object-cover" 
+            <img 
+              src={LogoPhoto} 
+              alt="SHE Thrive Logo" 
+              className="w-full h-full object-cover" 
             />
           </div>
           <div className='flex flex-col justify-center'>
-          <span className={`font-serif font-bold text-xl tracking-tight transition-colors duration-300 ${scrolled ? 'text-purple-900' : 'text-white'}`}>
-            SHE <span className="text-pink-500">Thrive </span> 
+            <span className={`font-serif font-bold text-xl tracking-tight transition-colors duration-300 ${scrolled ? 'text-purple-900' : 'text-white'}`}>
+              SHE <span className="text-pink-500">Thrive </span> 
             </span>
             <span className={`font-sans text-[11px] uppercase tracking-[0.25em] font-medium mt-1 transition-colors duration-300 ${scrolled ? 'text-purple-900/60' : 'text-white/70'}`}>
-                 International
+              {t('navbar.sub_logo')}
             </span>
           </div>
         </Link>
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-6">
-          {navLinks.map(({ label, to }) => (
+          {navLinks.map(({ labelKey, to }) => (
             <Link
-              key={label}
+              key={labelKey}
               to={to}
               onClick={(e) => handleAnchor(e, to)}
               className={`text-sm font-medium transition-colors duration-200 hover:text-pink-500 ${
                 scrolled ? 'text-gray-700' : 'text-white/90'
               }`}
             >
-              {label}
+              {t(labelKey)}
             </Link>
           ))}
         </nav>
+
+        <LanguageSwitcher />
 
         {/* CTA */}
         <div className="hidden lg:flex items-center gap-3">
@@ -99,7 +104,7 @@ const Navbar = () => {
               if (el) el.scrollIntoView({ behavior: 'smooth' })
             }}
           >
-            Join Now
+            {t('navbar.btn_join')}
           </Button> */}
         </div>
 
@@ -122,14 +127,14 @@ const Navbar = () => {
         }`}
       >
         <div className="bg-white border-t border-purple-100 shadow-xl px-4 py-4 flex flex-col gap-1">
-          {navLinks.map(({ label, to }) => (
+          {navLinks.map(({ labelKey, to }) => (
             <Link
-              key={label}
+              key={labelKey}
               to={to}
               onClick={(e) => { handleAnchor(e, to); setMenuOpen(false) }}
               className="text-gray-700 hover:text-purple-700 hover:bg-purple-50 font-medium px-4 py-3 rounded-lg transition-colors text-sm"
             >
-              {label}
+              {t(labelKey)}
             </Link>
           ))}
           <div className="pt-3 border-t border-gray-100 mt-2">
@@ -143,7 +148,7 @@ const Navbar = () => {
                 if (el) el.scrollIntoView({ behavior: 'smooth' })
               }}
             >
-              Join Now
+              {t('navbar.btn_join')}
             </Button>
           </div>
         </div>

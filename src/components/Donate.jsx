@@ -1,15 +1,19 @@
 import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next' // 1. Import du hook
 import { Heart, Shield, Star } from 'lucide-react'
 import Button from './Button'
 
-const presets = [
-  { label: '5 000 XAF',  value: 5000,  impact: 'Covers training materials for 1 woman' },
-  { label: '15 000 XAF', value: 15000, impact: 'Sponsors 1 week of skills training' },
-  { label: '30 000 XAF', value: 30000, impact: 'Funds mentorship sessions for a month' },
-  { label: '75 000 XAF', value: 75000, impact: 'Full program scholarship for 1 woman' },
-]
-
 const Donate = () => {
+  const { t } = useTranslation(); // 2. Initialisation du hook
+
+  // Liste des presets avec des clés de traduction pour l'impact
+  const presets = [
+    { label: '5 000 XAF',  value: 5000,  impactKey: 'donate.impacts.p1' },
+    { label: '15 000 XAF', value: 15000, impactKey: 'donate.impacts.p2' },
+    { label: '30 000 XAF', value: 30000, impactKey: 'donate.impacts.p3' },
+    { label: '75 000 XAF', value: 75000, impactKey: 'donate.impacts.p4' },
+  ]
+
   const [selected, setSelected] = useState(presets[1].value)
   const [custom,   setCustom]   = useState('')
   const [type,     setType]     = useState('once')
@@ -31,10 +35,14 @@ const Donate = () => {
 
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12 animate-on-scroll">
-            <span className="inline-block text-xs font-medium text-pink-600 uppercase tracking-widest mb-3">Give Today</span>
-            <h2 className="font-serif text-4xl sm:text-5xl font-bold text-purple-950 mb-4">Make a Difference</h2>
+            <span className="inline-block text-xs font-medium text-pink-600 uppercase tracking-widest mb-3">
+              {t('donate.top_label')}
+            </span>
+            <h2 className="font-serif text-4xl sm:text-5xl font-bold text-purple-950 mb-4">
+              {t('donate.title')}
+            </h2>
             <p className="text-gray-500 max-w-lg mx-auto text-lg">
-              Every franc you give directly funds a woman's training, mentorship, and future.
+              {t('donate.subtitle')}
             </p>
           </div>
 
@@ -43,24 +51,28 @@ const Donate = () => {
             {done ? (
               <div className="text-center py-10">
                 <div className="text-6xl mb-4">💜</div>
-                <h3 className="font-serif text-3xl font-bold text-purple-900 mb-3">Thank you!</h3>
-                <p className="text-gray-600">Your generosity changes lives. We'll send a receipt to your email.</p>
+                <h3 className="font-serif text-3xl font-bold text-purple-900 mb-3">
+                  {t('donate.thank_you')}
+                </h3>
+                <p className="text-gray-600">
+                  {t('donate.success_desc')}
+                </p>
               </div>
             ) : (
               <>
                 {/* One-time / Monthly */}
                 <div className="flex gap-3 mb-8 bg-white rounded-2xl p-1 max-w-xs">
-                  {['once', 'monthly'].map((t) => (
+                  {['once', 'monthly'].map((tKey) => (
                     <button
-                      key={t}
-                      onClick={() => setType(t)}
+                      key={tKey}
+                      onClick={() => setType(tKey)}
                       className={`flex-1 py-2.5 rounded-xl text-sm font-medium transition-all ${
-                        type === t
+                        type === tKey
                           ? 'bg-purple-700 text-white shadow-md'
                           : 'text-gray-500 hover:text-purple-700'
                       }`}
                     >
-                      {t === 'once' ? 'Give Once' : 'Give Monthly'}
+                      {tKey === 'once' ? t('donate.give_once') : t('donate.give_monthly')}
                     </button>
                   ))}
                 </div>
@@ -87,7 +99,7 @@ const Donate = () => {
                   <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm">XAF</span>
                   <input
                     type="number"
-                    placeholder="Enter custom amount"
+                    placeholder={t('donate.custom_placeholder')}
                     value={custom}
                     onChange={(e) => { setCustom(e.target.value); setSelected(null) }}
                     className="w-full bg-white border-2 border-purple-200 focus:border-purple-500 rounded-2xl pl-14 pr-4 py-3 text-sm outline-none"
@@ -98,7 +110,7 @@ const Donate = () => {
                 {chosenPreset && !custom && (
                   <p className="text-sm text-purple-600 font-medium mb-6 flex items-center gap-2">
                     <Star size={14} className="text-pink-500 fill-pink-500" />
-                    {chosenPreset.impact}
+                    {t(chosenPreset.impactKey)}
                   </p>
                 )}
 
@@ -106,20 +118,20 @@ const Donate = () => {
                 <div className="flex flex-col sm:flex-row gap-3 mt-6">
                   <Button variant="primary" size="lg" className="flex-1" onClick={handleDonate}>
                     <Heart size={17} className="mr-2 fill-white" />
-                    Donate {amount ? `${amount.toLocaleString()} XAF` : ''}
+                    {t('donate.btn_donate')} {amount ? `${amount.toLocaleString()} XAF` : ''}
                   </Button>
                   <Button variant="pink" size="lg" className="flex-1" onClick={handleDonate}>
-                    Sponsor a Training
+                    {t('donate.btn_sponsor')}
                   </Button>
                 </div>
 
                 {/* Trust signals */}
                 <div className="flex items-center justify-center gap-4 mt-6 text-xs text-gray-400">
-                  <span className="flex items-center gap-1"><Shield size={12} /> Secure payment</span>
+                  <span className="flex items-center gap-1"><Shield size={12} /> {t('donate.trust.secure')}</span>
                   <span>•</span>
-                  <span>100% goes to programs</span>
+                  <span>{t('donate.trust.programs')}</span>
                   <span>•</span>
-                  <span>Receipt provided</span>
+                  <span>{t('donate.trust.receipt')}</span>
                 </div>
               </>
             )}
