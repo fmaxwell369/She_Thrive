@@ -132,7 +132,7 @@ const Footer = () => {
       {/* Bottom bar */}
       <div className="border-t border-white/10 py-5">
         <div className="container-max px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-white/40">
-          <p>© {new Date().getFullYear()} SHE Thrive. {t('footer.rights')}</p>
+          <p>© {new Date().getFullYear()} SHE Thrive power by Mankis. {t('footer.rights')}</p>
         </div>
       </div>
     </footer>

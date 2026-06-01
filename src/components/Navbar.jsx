@@ -16,10 +16,13 @@ const navLinks = [
   { labelKey: 'navbar.links.get_involved', to: '/#get-involved' },
   { labelKey: 'navbar.links.events',       to: '/events' },
   { labelKey: 'navbar.links.contact',      to: '/#contact' },
+  { labelKey: 'navbar.links.jobs',         to: '/#WhatWeDo'},
+  { labelKey: 'navbar.links.coaching',   to: '/#WhatWeDo'},
+  { labelKey: 'navbar.links.counseling',   to: '/#WhatWeDo'},
 ]
 
 const Navbar = () => {
-  const { t } = useTranslation() // 2. Initialisation du hook de traduction
+  const { t } = useTranslation() 
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()

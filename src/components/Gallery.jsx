@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { useTranslation } from 'react-i18next' // 1. Import du hook
+import { useTranslation } from 'react-i18next'
 import { X, ZoomIn } from 'lucide-react'
 import { galleryImages } from '../data'
 
 const Gallery = () => {
-  const { t } = useTranslation() // 2. Initialisation du hook
+  const { t } = useTranslation()
   const [lightbox, setLightbox] = useState(null)
 
   return (
@@ -24,19 +24,17 @@ const Gallery = () => {
           </p>
         </div>
 
-        {/* Masonry-style grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 animate-on-scroll">
-          {galleryImages.map((img, i) => {
+        {/* Uniform Grid (Toutes les images au même format) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 animate-on-scroll">
+          {galleryImages.map((img) => {
             // Traduction dynamique du texte alternatif basé sur l'id de l'image
             const translatedAlt = t(`gallery.images.${img.id}`, img.alt);
 
             return (
               <div
                 key={img.id}
-                className={`group relative overflow-hidden rounded-2xl cursor-pointer ${
-                  i === 0 || i === 3 ? 'sm:row-span-2' : ''
-                }`}
-                style={{ aspectRatio: i === 0 || i === 3 ? '3/4' : '4/3' }}
+                className="group relative overflow-hidden rounded-2xl cursor-pointer w-full"
+                style={{ aspectRatio: '4/3' }} // 👈 Force le ratio de la 2e image pour tout le monde
                 onClick={() => setLightbox({ ...img, translatedAlt })}
               >
                 <img

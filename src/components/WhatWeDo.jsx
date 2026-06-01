@@ -10,7 +10,7 @@ const services = [
     descriptionKey: 'whatwedo.services.consulting.description',
     audienceKey: 'whatwedo.services.consulting.audience',
     ctaKey: 'whatwedo.services.consulting.cta',
-    href: '/#contact',
+    href: '/#jobs',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="24" cy="14" r="8" stroke="currentColor" strokeWidth="2.5" />
@@ -32,7 +32,7 @@ const services = [
       'whatwedo.services.jobs.categories.gigs'
     ],
     ctaKey: 'whatwedo.services.jobs.cta',
-    href: '/events',
+    href: '/#jobs',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="6" y="16" width="36" height="26" rx="3" stroke="currentColor" strokeWidth="2.5" />
@@ -49,7 +49,7 @@ const services = [
     descriptionKey: 'whatwedo.services.counseling.description',
     reassuranceKey: 'whatwedo.services.counseling.reassurance',
     ctaKey: 'whatwedo.services.counseling.cta',
-    href: '/#contact',
+    href: '/#jobs',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M24 6C14 6 7 13 7 21c0 5.5 3.2 10.3 8 13.1V42l6-4h3c8.8 0 17-6.7 17-15 0-8.3-7.2-17-17-17z" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
@@ -61,7 +61,7 @@ const services = [
 ];
 
 export default function WhatWeDo() {
-  const { t } = useTranslation(); // 2. Initialisation d'i18n
+  const { t } = useTranslation(); 
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -82,7 +82,7 @@ export default function WhatWeDo() {
   }, []);
 
   return (
-    <section className="wwd-section" id="programs" ref={sectionRef}>
+    <section className="wwd-section" id="WhatWeDo" ref={sectionRef}>
       {/* Section Header */}
       <div className="wwd-header">
         <span className="wwd-eyebrow">{t('whatwedo.eyebrow')}</span>

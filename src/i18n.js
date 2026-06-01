@@ -5,6 +5,7 @@ const resources = {
   fr: {
     translation: {
       // ── ABOUT SECTION ──────────────────────────────────────────────
+      
       "about": {
         "top_label": "Qui nous sommes",
         "title": "À propos de SHE Thrive",
@@ -256,7 +257,10 @@ const resources = {
           "impact": "Impact",
           "get_involved": "S'impliquer",
           "events": "Événements",
-          "contact": "Contact"
+          "contact": "Contact",
+          "jobs": "Offres d'emploi",
+          "coaching": "Coaching",
+          "counseling": "Accompagnement"
         }
       },
 
@@ -362,6 +366,7 @@ const resources = {
   en: {
     translation: {
       // ── ABOUT SECTION ──────────────────────────────────────────────
+    
       "about": {
         "top_label": "Who We Are",
         "title": "About SHE Thrive",
@@ -613,7 +618,10 @@ const resources = {
           "impact": "Impact",
           "get_involved": "Get Involved",
           "events": "Events",
-          "contact": "Contact"
+          "contact": "Contact",
+          "jobs": "Jobs",
+          "coaching": "Coaching",
+          "counseling": "Counseling"
         }
       },
 
