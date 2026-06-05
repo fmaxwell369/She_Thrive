@@ -118,7 +118,7 @@ const Footer = () => {
               </li>
               <li className="flex gap-2.5 items-center text-sm text-white/60">
                 <Mail size={15} className="text-pink-500 shrink-0" />
-                info@shethrive.org
+                info@shethrivecm.org
               </li>
               <li className="flex gap-2.5 items-center text-sm text-white/60">
                 <Phone size={15} className="text-pink-500 shrink-0" />
@@ -129,12 +129,12 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom bar */}
-      <div className="border-t border-white/10 py-5">
-        <div className="container-max px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-white/40">
-          <p>© {new Date().getFullYear()} SHE Thrive power by Mankis. {t('footer.rights')}</p>
-        </div>
-      </div>
+     {/* Bottom bar */}
+<div className="border-t border-white/10 py-5">
+  <div className="container-max px-4 sm:px-6 lg:px-8 flex items-center justify-center text-sm text-white/40">
+    <p className="text-center">© {new Date().getFullYear()} SHE Thrive Power By Mankis. {t('footer.rights')}</p>
+  </div>
+</div>
     </footer>
   )
 }
