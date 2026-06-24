@@ -105,9 +105,9 @@ const Events = () => {
                     {event.spots ? `${event.spots} spots available` : ''}
                   </span>
                   
-                  <a 
+                  <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLSdz4zBFCB79_p--HARyzp3hm88oD0Qjusr7lQRxKfzjJYHAdw/viewform?usp=header" 
-                    target="_blank" 
+                    target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Button

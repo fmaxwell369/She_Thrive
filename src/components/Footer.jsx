@@ -2,6 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next' // 1. Import du hook
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, Youtube } from 'lucide-react'
+import partner1 from '../assets/partner1.png'
+import partner2 from '../assets/partner2.png'
+import partner3 from '../assets/partner3.png'
+import partner4 from '../assets/partner4.png'
+import partner5 from '../assets/partner5.png'
 
 const Footer = () => {
   const { t } = useTranslation() // 2. Initialisation du hook
@@ -41,101 +46,119 @@ const Footer = () => {
   }
 
   return (
-    <footer className="bg-purple-950 text-white">
-      {/* Main footer */}
-      <div className="container-max px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-
-          {/* Brand */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 flex items-center justify-center">
-                <span className="text-white font-serif font-bold text-sm">ST</span>
-              </div>
-              <span className="font-serif font-bold text-xl">
-                SHE <span className="text-pink-500">Thrive</span>
-              </span>
-            </div>
-            <p className="text-white/60 text-sm leading-relaxed mb-5">
-              {t('footer.description')}
-            </p>
-            {/* Socials */}
-            <div className="flex gap-3">
-              {socials.map(({ icon: Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-pink-500 flex items-center justify-center transition-colors duration-200"
-                >
-                  <Icon size={16} />
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Quick links */}
-          <div>
-            <h4 className="font-serif font-bold text-lg mb-5">{t('footer.titles.links')}</h4>
-            <ul className="space-y-2.5">
-              {quickLinks.map(({ labelKey, to }) => (
-                <li key={labelKey}>
-                  <Link
-                    to={to}
-                    onClick={(e) => handleAnchor(e, to)}
-                    className="text-white/60 hover:text-pink-500 text-sm transition-colors"
-                  >
-                    {t(labelKey)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Programs */}
-          <div>
-            <h4 className="font-serif font-bold text-lg mb-5">{t('footer.titles.programs')}</h4>
-            <ul className="space-y-2.5">
-              {programs.map((pKey) => (
-                <li key={pKey}>
-                  <a href="#programs" className="text-white/60 hover:text-pink-500 text-sm transition-colors">
-                    {t(pKey)}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="font-serif font-bold text-lg mb-5">{t('footer.titles.contact')}</h4>
-            <ul className="space-y-3">
-              <li className="flex gap-2.5 items-start text-sm text-white/60">
-                <MapPin size={15} className="text-pink-500 mt-0.5 shrink-0" />
-                Douala, Cameroon
-              </li>
-              <li className="flex gap-2.5 items-center text-sm text-white/60">
-                <Mail size={15} className="text-pink-500 shrink-0" />
-                info@shethrivecm.org
-              </li>
-              <li className="flex gap-2.5 items-center text-sm text-white/60">
-                <Phone size={15} className="text-pink-500 shrink-0" />
-                +237 650 69 00 59
-              </li>
-            </ul>
+    <>
+    {/* Partners Section */}
+      <div className="bg-gray-50 py-12 px-4">
+        <div className="container-max px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-3xl font-bold uppercase tracking-widest text-purple-700 mb-8">
+            {t('footer.partners.title')}
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-10">
+            <img src={partner1} alt="Partner 1" className="h-20 object-contain transition duration-300" />
+            <img src={partner2} alt="Partner 2" className="h-20 object-contain transition duration-300" />
+            <img src={partner3} alt="Partner 3" className="h-20 object-contain transition duration-300" />
+            <img src={partner4} alt="Partner 4" className="h-20 object-contain transition duration-300" />
+            <img src={partner5} alt="Partner 5" className="h-20 object-contain transition duration-300" />
           </div>
         </div>
       </div>
 
-     {/* Bottom bar */}
-<div className="border-t border-white/10 py-5">
-  <div className="container-max px-4 sm:px-6 lg:px-8 flex items-center justify-center text-sm text-white/40">
-    <p className="text-center">© {new Date().getFullYear()} SHE Thrive Power By Mankis. {t('footer.rights')}</p>
-  </div>
-</div>
-    </footer>
+      <footer className="bg-purple-950 text-white">
+        {/* Main footer */}
+        <div className="container-max px-4 sm:px-6 lg:px-8 py-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            {/* Brand */}
+            <div className="lg:col-span-1">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-9 h-9 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 flex items-center justify-center">
+                  <span className="text-white font-serif font-bold text-sm">ST</span>
+                </div>
+                <span className="font-serif font-bold text-xl">
+                  SHE <span className="text-pink-500">Thrive</span>
+                </span>
+              </div>
+              <p className="text-white/60 text-sm leading-relaxed mb-5">
+                {t('footer.description')}
+              </p>
+              {/* Socials */}
+              <div className="flex gap-3">
+                {socials.map(({ icon: Icon, href, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    aria-label={label}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 rounded-full bg-white/10 hover:bg-pink-500 flex items-center justify-center transition-colors duration-200"
+                  >
+                    <Icon size={16} />
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Quick links */}
+            <div>
+              <h4 className="font-serif font-bold text-lg mb-5">{t('footer.titles.links')}</h4>
+              <ul className="space-y-2.5">
+                {quickLinks.map(({ labelKey, to }) => (
+                  <li key={labelKey}>
+                    <Link
+                      to={to}
+                      onClick={(e) => handleAnchor(e, to)}
+                      className="text-white/60 hover:text-pink-500 text-sm transition-colors"
+                    >
+                      {t(labelKey)}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Programs */}
+            <div>
+              <h4 className="font-serif font-bold text-lg mb-5">{t('footer.titles.programs')}</h4>
+              <ul className="space-y-2.5">
+                {programs.map((pKey) => (
+                  <li key={pKey}>
+                    <a href="#programs" className="text-white/60 hover:text-pink-500 text-sm transition-colors">
+                      {t(pKey)}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Contact */}
+            <div>
+              <h4 className="font-serif font-bold text-lg mb-5">{t('footer.titles.contact')}</h4>
+              <ul className="space-y-3">
+                <li className="flex gap-2.5 items-start text-sm text-white/60">
+                  <MapPin size={15} className="text-pink-500 mt-0.5 shrink-0" />
+                  Douala, Cameroon
+                </li>
+                <li className="flex gap-2.5 items-center text-sm text-white/60">
+                  <Mail size={15} className="text-pink-500 shrink-0" />
+                  info@shethrivecm.org
+                </li>
+                <li className="flex gap-2.5 items-center text-sm text-white/60">
+                  <Phone size={15} className="text-pink-500 shrink-0" />
+                  +237 650 69 00 59
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="border-t border-white/10 py-5">
+          <div className="container-max px-4 sm:px-6 lg:px-8 flex items-center justify-center text-sm text-white/40">
+            <p className="text-center">© {new Date().getFullYear()} SHE Thrive Power By Mankis. {t('footer.rights')}</p>
+          </div>
+        </div>
+      </footer>
+    </>
   )
 }
 

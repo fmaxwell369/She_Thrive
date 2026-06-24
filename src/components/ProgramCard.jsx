@@ -31,14 +31,17 @@ const ProgramCard = ({ program, onJoin }) => {
         {/* Title overlay */}
         <div className="absolute bottom-4 left-5 right-5">
           <h3 className="font-serif text-2xl font-bold text-white leading-tight">{t(titleKey)}</h3>
-          <p className={`text-sm font-medium mt-0.5 ${isPurple ? 'text-purple-200' : 'text-pink-200'}`}>{t(taglineKey)}</p>
+<p className={`text-sm font-medium mt-0.5 ${isPurple ? 'text-purple-200' : 'text-pink-300'}`}
+  dangerouslySetInnerHTML={{ __html: t(taglineKey) }}/>
         </div>
       </div>
 
       {/* Body */}
       <div className="p-6 flex flex-col flex-1">
 
-        <p className="text-gray-600 text-sm leading-relaxed mb-5">{t(descKey)}</p>
+        <p className="text-gray-600 text-sm leading-relaxed mb-5"
+  dangerouslySetInnerHTML={{ __html: t(descKey) }}/>
+
 
         {/* Outcomes */}
         <ul className="space-y-2 mb-5">

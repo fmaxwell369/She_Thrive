@@ -5,8 +5,8 @@ import { ChevronDown } from 'lucide-react'
 
 import bg_photo from '../assets/about1.png'
 
-import thumb1 from '../assets/logo.png' 
-import thumb2 from '../assets/logo2.png' 
+import thumb1 from '../assets/logo.png'
+import thumb2 from '../assets/logo2.png'
 
 const Hero = () => {
   const { t } = useTranslation()
@@ -14,7 +14,7 @@ const Hero = () => {
   const videosBackground = [
     { 
       video: "https://res.cloudinary.com/da8bql4kb/video/upload/v1780652157/video1_numpfw.mp4", // <-- Mets ton URL ici
-      thumb: thumb1 
+      thumb: thumb1
     },
   ];
   
@@ -80,13 +80,16 @@ const Hero = () => {
         <div className="w-full max-w-4xl">
           
           {/* TITRE FIXE ET UNIQUE */}
-          <div className="mb-6">
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight">
-              {t('hero.title_part1')}<span className="italic text-pink-500">{t('hero.title_span1')}</span>
-              <br />
-              {t('hero.title_part2')}<span className="italic text-pink-500">{t('hero.title_span2')}</span>
-            </h1>
-          </div>
+         {/* TITRE FIXE ET UNIQUE MODIFIÉ */}
+<div className="mb-6">
+  <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight">
+    {t('hero.title_part1')}<span className="italic text-pink-500">{t('hero.title_span1')}</span>
+    <br />
+    {t('hero.title_part2')}<span className="italic text-pink-500">{t('hero.title_span2')}</span>
+    <br />
+    {t('hero.title_part3')}<span className="italic text-pink-500">{t('hero.title_span3')}</span>
+  </h1>
+</div>
 
           {/* DESCRIPTION */}
           <p className="text-lg sm:text-xl text-white/80 font-light leading-relaxed mb-10 max-w-3xl">

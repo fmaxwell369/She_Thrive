@@ -5,7 +5,6 @@ const resources = {
   fr: {
     translation: {
       // ── ABOUT SECTION ──────────────────────────────────────────────
-      
       "about": {
         "top_label": "Qui nous sommes",
         "title": "À propos de SHE Thrive",
@@ -13,7 +12,7 @@ const resources = {
         "img_alt": "Communauté de femmes SHE Thrive",
         "stat_year": "Année de création de SHE Thrive",
         "story_title": "NOTRE HISTOIRE.",
-        "story_p1": "She Thrive International est née d'une conviction profonde et personnelle de voir des vies transformées et des communautés reconstruites. Le voyage a commencé à Yaoundé au Cameroun, où notre fondatrice s'est donné pour mission personnelle de visiter régulièrement des orphelinats. Ce qui a commencé comme de simples actes de gentillesse s'est rapidement transformé en une action mais plus large s'étendant aux enfants de la rue. Des repas étaient préparés et partagés dans des endroits comme l'Avenue Kennedy, créant des moments d'espoir pour ceux qui en avaient le plus besoin. Mais au-delà de la satisfaction des besoins immédiats, une question plus profonde est apparue : Comment créer un changement durable ? Cette question a suscité une vision : autonomiser les individus non pas seulement par de l'aide, mais par des opportunités. L'idée initiale était simple mais puissante : aider les gens à démarrer de petites entreprises, les soutenir pour grandir durablement et les inspirer à étendre ce même soutien à d'autres. Cependant, cette vision a fait face à un obstacle majeur : des ressources financières limitées. Plutôt que d'arrêter la mission, ce défi a conduit à l'innovation. Grâce à des recherches, des opportunités de subventions internationales pour les entreprises ont été découvertes. Ce qui a commencé comme une solution personnelle est rapidement devenu une voie d'impact. Des femmes ont été guidées tout au long du processus de candidature, et beaucoup ont réussi à obtenir des financements pour lancer et développer leurs entreprises.",
+        "story_p1": "She Thrive International est née d'une conviction profonde et personnelle de voir des vies transformées et des communautés reconstruites. Le voyage a commencé à Yaoundé au Cameroun, où notre fondatrice s'est donné pour mission personnelle de visiter régulièrement des orphelinats. Ce qui a commencé comme de simples actes de gentillesse s'est rapidement transformé en une action mais plus large s'étendant aux enfants de la rue. Des repas étaient préparés et partagés dans des endroits comme l'Avenue Kennedy, créant des moments d'espoir pour ceux qui en avaient le plus besoin. Mais au-delà de la satisfaction des besoins immédiats, une question plus profonde est apparue : Comment créer un changement durable ? Cette question a suscité une vision : autonomiser les individus non pas seulement par de l'aide, mais par des opportunités. L'idée initiale était simple mais puissante : aider les gens à démarrer de petites entreprises, les soutenir pour grandir durablement et les inspirer à étendre ce même soutien à d'autres. Cependant, cette vision a fait face à un obstacle majeur : des ressources financières limitées. Plutôt que d'arrêter la mission, ce défi a conduit à l'innovation. Grâce à des recherches, des opportunités de subventions internationales pour les entreprises ont été découvertes. Ce qui a commencé comme une solution personnelle ést rapidement devenu une voie d'impact. Des femmes ont été guidées tout au long du processus de candidature, et beaucoup ont réussi à obtenir des financements pour lancer et développer leurs entreprises.",
         "story_p2": "Pourquoi les femmes ? Parce que l'autonomisation d'une femme est l'un des moyens les plus efficaces de transformer une société. Les femmes façonnent les foyers, nourrissent les futurs dirigeants et influencent l'orientation des communautés. Quand une femme s'élève, sa famille s'élève, et quand les familles s'élèvent, les nations se reconstruisent. She Thrive International existe pour championner cette transformation. Nous nous engagons à équiper les femmes avec les outils, les ressources et les opportunités dont elles ont besoin pour s'épanouir, non seulement pour elles-mêmes, mais pour les générations à venir.",
         "vision_label": "Notre Vision",
         "vision_title": "Voir des femmes autonomes s'élever en tant que leaders, restauratrices et bâtisseuses de nations.",
@@ -31,17 +30,21 @@ const resources = {
 
       // ── BLOG SECTION ───────────────────────────────────────────────
       "blog": {
-        "top_label": "Notre Blog",
-        "title": "Derniers Articles",
-        "view_all": "Voir tous les articles",
-        "read_more": "Lire la suite",
-        "read": "de lecture",
-        "categories": {
-          "Entrepreneurship": "Entrepreneuriat",
-          "Leadership": "Leadership",
-          "Stories": "Histoires"
-        }
-      },
+  "posts": {
+    "1": {
+      "title": "5 façons dont les entreprises dirigées par des femmes transforment le Cameroun",
+      "excerpt": "À Yaoundé et Douala, une nouvelle génération de femmes entrepreneures réécrit les règles du commerce — et l'économie s'en aperçoit."
+    },
+    "2": {
+      "title": "Pourquoi la formation au leadership féminin est plus importante que jamais",
+      "excerpt": "Les recherches montrent que lorsque les femmes dirigent, les communautés prospèrent. Voici ce que fait notre programme Nation Builders."
+    },
+    "3": {
+      "title": "Rencontrez les femmes qui construisent des entreprises de zéro",
+      "excerpt": "Trois diplômées de notre programme Empower HER partagent leur parcours de l'incertitude à la confiance — et leurs projets à venir."
+    }
+  }
+},
 
       // ── CONTACT SECTION ────────────────────────────────────────────
       "contact": {
@@ -196,8 +199,10 @@ const resources = {
       "hero": {
         "title_part1": "Autonomiser les ",
         "title_span1": "Femmes.",
-        "title_part2": "Bâtir les ",
-        "title_span2": "Nations.",
+        "title_part2": "Restaurer ",
+        "title_span2": "L'espoir.",
+        "title_part3": "Bâtir les ",
+        "title_span3": "Nations.",
         "description_part1": "Un mouvement né pour restaurer, équiper et connecter les femmes pour une transformation durable. Grâce aux compétences, à la foi et à la communauté,",
         "description_span1": " SHE ",
         "description_span2": "Thrive",
@@ -230,20 +235,20 @@ const resources = {
           "student": "Alumna Empower HER",
           "leader": "Leader Communautaire"
         },
-       "quotes": {
-    "testimonial_1": "Grâce au programme de soutien aux subventions d’entreprise de She Thrive International, j’ai reçu l’appui et les encouragements dont j’avais besoin pour transformer ma vision en réalité. Grâce à cette subvention, j’ai lancé avec succès ENJECK FARMS — une entreprise avicole en pleine croissance, engagée à fournir des produits de volaille locaux, accessibles et de haute qualité.",
-    "testimonial_2": "La dépendance à la validation extérieure et le besoin d’acceptation sont des mécanismes psychologiques dans lesquels l’estime de soi repose sur l’approbation des autres plutôt que sur une évaluation personnelle intérieure. Bien qu’il soit naturel de rechercher de la reconnaissance, une dépendance excessive peut devenir un obstacle majeur au développement personnel et révéler une faible estime de soi.",
-    "testimonial_3": "Je suis passée de la vente de snacks à la gestion d'une boutique en ligne avec des clientes dans tout le Cameroun. SHE Thrive ne m'a pas seulement formée – elles ont cru en moi à un moment où moi-même, je ne croyais plus en mes capacités.",
-    "roles": {
-      "stacy": "Diplômée Empower HER · Propriétaire de ENJECK FARMS",
-      "maureen": "Membre Nation Builders · Actrice de santé communautaire",
-      "patience": "Diplômée Empower HER · Entrepreneure digitale"
-    },
-    "cities": {
-      "douala": "Douala",
-      "bafoussam": "Bafoussam"
-    }
-  }
+        "quotes": {
+          "testimonial_1": "Grâce au programme de soutien aux subventions d’entreprise de She Thrive International, j’ai reçu l’appui et les encouragements dont j’avais besoin pour transformer ma vision en réalité. Grâce à cette subvention, j’ai lancé avec succès ENJECK FARMS — une entreprise avicole en pleine croissance, engagée à fournir des produits de volaille locaux, accessibles et de haute qualité.",
+          "testimonial_2": "La dépendance à la validation extérieure et le besoin d’acceptation sont des mécanismes psychologiques dans lesquels l’estime de soi repose sur l’approbation des autres plutôt que sur une évaluation personnelle intérieure. Bien qu’il soit naturel de rechercher de la reconnaissance, une dépendance excessive peut devenir un obstacle majeur au développement personnel et révéler une faible estime de soi.",
+          "testimonial_3": "Je suis passée de la vente de snacks à la gestion d'une boutique en ligne avec des clientes dans tout le Cameroun. SHE Thrive ne m'a pas seulement formée – elles ont cru en moi à un moment où moi-même, je ne croyais plus en mes capacités.",
+          "roles": {
+            "stacy": "Diplômée Empower HER · Propriétaire de ENJECK FARMS",
+            "maureen": "Membre Nation Builders · Actrice de santé communautaire",
+            "patience": "Diplômée Empower HER · Entrepreneure digitale"
+          },
+          "cities": {
+            "douala": "Douala",
+            "bafoussam": "Bafoussam"
+          }
+        }
       },
 
       // ── NAVBAR SECTION ─────────────────────────────────────────────
@@ -272,32 +277,56 @@ const resources = {
         "not_sure": "Vous ne savez pas quel programme vous convient ?",
         "btn_team": "Discuter avec notre équipe",
         "btn_join": "Rejoindre",
-       "items": {
-  "empower_her": {
-    "title": "Empower HER",
-    "tagline": "Doter les femmes de compétences pour la vie et l'autonomie financière.",
-    "desc": "Empower HER est la branche d'autonomisation pratique de SHE Thrive, axée sur la formation, l'équipement et l'activation des femmes.",
-    "audience": "Les femmes prêtes à grandir, à gagner leur vie et à construire un avenir meilleur.",
-    "outcomes": [
-      "Programmes d'acquisition de compétences",
-      "Formation aux affaires et à l'entrepreneuriat",
-      "Ateliers et conférences",
-      "Sessions de développement personnel"
-    ]
-  },
-  "nation_builders": {
-    "title": "Nation Builders",
-    "tagline": "Bâtir une communauté forte de femmes qui se soutiennent mutuellement.",
-    "desc": "Conçu pour former les futures leaders et entrepreneures afin de générer un impact durable et transformationnel au sein de leurs communautés.",
-    "audience": "Les femmes qui ont besoin de soutien, de guérison, de connexion et de croissance spirituelle.",
-    "outcomes": [
-      "Systèmes de soutien spirituel et de prière",
-      "Conseil et mentorat",
-      "Groupes communautaires et cercles de redevabilité",
-      "Soutien émotionnel et accompagnement de vie"
-    ]
-  }
-}
+        "items": {
+          "empower_her": {
+            "title": "Autonomiser HER",
+              "tagline": "Un monde où chaque femme et chaque fille dispose des compétences, des opportunités, de la confiance, des ressources et des capacités de leadership nécessaires pour atteindre l'indépendance économique et créer un changement durable dans sa famille et sa communauté.",
+              "desc": "Autonomiser les femmes et les filles grâce à des programmes d'éducation, d'entrepreneuriat, de développement du leadership, d'innovation numérique, d'inclusion financière et d'avancement professionnel qui leur permettent de s'épanouir économiquement et socialement.",
+              "audience": "Équiper les femmes. Libérer les opportunités. Transformer les avenirs.",
+            "outcomes": [
+              "Améliorer l'employabilité des femmes et leur préparation au marché du travail.",
+              "Augmenter le nombre d'entreprises et de commerces appartenant à des femmes.",
+              "Élargir l'accès à l'inclusion financière.",
+              "Promouvoir la littératie numérique et l'innovation.",
+              "Renforcer la place des femmes dans le leadership et la prise de décision.",
+              "Soutenir l'autonomisation des jeunes et des adolescentes.",
+              "Accroître la résilience économique des femmes vulnérables.",
+              "Créer des voies vers un travail décent et la génération de revenus."
+            ]
+          },
+          "nation_builders": {
+            "title": "Bâtisseurs de Nation",
+            "tagline": "Une société où les individus, les familles et les communautés sont dotés de valeurs, de capacités de leadership, de résilience et de responsabilité sociale pour conduire une transformation durable.",
+            "desc": "Renforcer les individus, les familles et les communautés à travers le mentorat, le soutien psychosocial basé sur les valeurs, l'engagement civique et des programmes de développement communautaire qui favorisent la résilience, la cohésion sociale et un changement sociétal positif.",
+            "audience": "Construire les personnes. Renforcer les familles. Transformer les communautés.",
+            "outcomes": [
+              "Renforcer le bien-être et la stabilité familiale.",
+              "Développer des leaders éthiques et transformationnels.",
+              "Promouvoir la cohésion sociale et la résilience communautaire.",
+              "Élargir les opportunités de mentorat et de compétences de vie.",
+              "Soutenir le développement des jeunes et une citoyenneté positive.",
+              "Améliorer le bien-être psychosocial et émotionnel.",
+              "Promouvoir la consolidation de la paix et la prévention des conflits.",
+              "Construire de solides réseaux de soutien communautaire."
+            ]
+          },
+          "Wellness_For_Life": {
+            "title": "Bien-être pour la Vie",
+            "tagline": "Un monde où les femmes, les filles, les familles et les communautés bénéficient d'une santé optimale, d'un bien-être global et d'un accès à des services de santé de qualité.",
+            "desc": "Améliorer les résultats en matière de santé et le bien-être général grâce à l'éducation sanitaire communautaire, aux soins de santé préventifs, au soutien à la santé mentale, aux interventions nutritionnelles et aux partenariats stratégiques qui permettent aux communautés de s'épanouir.",
+            "audience": "Des femmes en bonne santé, des familles fortes, des communautés prospères",
+          "outcomes": [
+            "Améliorer l'accès à des informations sanitaires de qualité.",
+            "Accroître l'adoption des pratiques de soins de santé préventifs.",
+            "Promouvoir la santé mentale et le bien-être psychosocial.",
+            "Renforcer la santé maternelle et reproductive.",
+            "Améliorer la nutrition et la sécurité alimentaire.",
+            "Soutenir le vieillissement en bonne santé et les soins aux personnes âgées.",
+            "Réduire les maladies évitables.",
+            "Renforcer les systèmes de santé communautaires."
+              ]
+          }
+        }
       },
 
       // ── WHAT WE DO SECTION ──────────────────────────────────────────
@@ -339,7 +368,7 @@ const resources = {
       "events": {
         "eyebrow": "Ce qui arrive",
         "title": "Événements À Venir",
-        "subtitle": "Rejoignez-nous lors de nos événements — là où les femmes se rassemblent pour apprendre, grow, diriger et s'épanouir ensemble.",
+        "subtitle": "Rejoignez-nous lors de nos événements — là où les femmes se rassemblent pour apprendre, grow, diriger et s'épanouisser ensemble.",
         "categories": {
           "summit": "Sommet",
           "training": "Formation",
@@ -366,7 +395,6 @@ const resources = {
   en: {
     translation: {
       // ── ABOUT SECTION ──────────────────────────────────────────────
-    
       "about": {
         "top_label": "Who We Are",
         "title": "About SHE Thrive",
@@ -392,17 +420,21 @@ const resources = {
 
       // ── BLOG SECTION ───────────────────────────────────────────────
       "blog": {
-        "top_label": "From Our Blog",
-        "title": "Latest Articles",
-        "view_all": "View All Posts",
-        "read_more": "Read more",
-        "read": "read",
-        "categories": {
-          "Entrepreneurship": "Entrepreneurship",
-          "Leadership": "Leadership",
-          "Stories": "Stories"
-        }
-      },
+  "posts": {
+    "1": {
+      "title": "5 Ways Women-Led Businesses Are Transforming Cameroon",
+      "excerpt": "Across Yaoundé and Douala, a new generation of women entrepreneurs is rewriting the rules of business — and the economy is taking notice."
+    },
+    "2": {
+      "title": "Why Leadership Training for Women Matters More Than Ever",
+      "excerpt": "Research consistently shows that when women lead, communities thrive. Here's what our Nation Builders program is doing to close the gender leadership gap."
+    },
+    "3": {
+      "title": "Meet the Women Building Businesses From Scratch",
+      "excerpt": "Three graduates from our Empower HER program share their journeys from uncertainty to confidence — and what's next for their growing ventures."
+    }
+  }
+},
 
       // ── CONTACT SECTION ────────────────────────────────────────────
       "contact": {
@@ -460,14 +492,17 @@ const resources = {
         }
       },
 
-      // ── FOOTER SECTION ─────────────────────────────────────────────
-      "footer": {
-        "description": "Equipping African women with skills, leadership, and community to transform their lives and build stronger nations.",
-        "titles": {
-          "links": "Quick Links",
-          "programs": "Our Programs",
-          "contact": "Contact"
-        },
+      //Footer Section
+    "footer": {
+      "description": "Equipping African women with skills, leadership, and community to transform their lives and build stronger nations.",
+      "titles": {
+        "links": "Quick Links",
+        "programs": "Our Programs",
+        "contact": "Contact"
+  },
+      "partners": {
+        "title": "Our Partners & Supporters"
+  },
         "links": {
           "home": "Home",
           "about": "About Us",
@@ -485,7 +520,7 @@ const resources = {
         "rights": "All rights reserved."
       },
 
-      // ── GALLERY SECTION ────────────────────────────────────────────
+      // GALLERY SECTION
       "gallery": {
         "top_label": "Moments That Matter",
         "title": "Our Gallery",
@@ -500,7 +535,7 @@ const resources = {
         }
       },
 
-      // ── GET INVOLVED SECTION ────────────────────────────────────────
+      // GET INVOLVED SECTION
       "get_involved": {
         "top_label": "Take Action",
         "title": "Get Involved",
@@ -553,12 +588,14 @@ const resources = {
         }
       },
 
-      // ── HERO SECTION ───────────────────────────────────────────────
+      // HERO SECTION
       "hero": {
         "title_part1": "Empowering ",
         "title_span1": "Women.",
-        "title_part2": "Building ",
-        "title_span2": "Nations.",
+        "title_part2": "Restoring ",
+        "title_span2": "Hope.",
+        "title_part3": "Building ",
+        "title_span3": "Nations.",
         "description_part1": "A movement raised to restore, equip, and connect women for lasting transformation. Through skills, faith, and community,",
         "description_span1": " SHE ",
         "description_span2": "Thrive",
@@ -572,7 +609,7 @@ const resources = {
         }
       },
 
-      // ── IMPACT SECTION ─────────────────────────────────────────────
+      // IMPACT SECTION
       "impact": {
         "stats_top_label": "Our Impact",
         "stats_title": "Numbers That Tell Our Story",
@@ -592,22 +629,22 @@ const resources = {
           "leader": "Community Leader"
         },
         "quotes": {
-    "testimonial_1": "Through the business grant support program by She Thrive International, I received the support and encouragement I needed to turn my vision into reality With the grant, I successfully launched ENJECK FARMS — a growing poultry business committed to providing accessible, high-quality, locally produced poultry products.I am deeply grateful to She Thrive International for believing in my dream and giving me the platform to build a sustainable future.",
-    "testimonial_2": "Dependence on external validation and the need for acceptance are psychological mechanisms in which self-esteem relies on the approval of others rather than on internal self-evaluation. Although it is natural to seek recognition, excessive dependence can become a major obstacle to personal growth and may reveal low self-esteem.",
-    "testimonial_3": "I went from selling snacks to running an online boutique with customers across Cameroon. SHE Thrive didn't just train me – they believed in me they believed in me when I didn't believe in myself.",
-    "roles": {
-      "stacy": "Empower HER Graduate · Owner of ENJECK FARMS",
-      "maureen": "Nation Builders Fellow · Community Health Advocate",
-      "patience": "Empower HER Graduate · Digital Entrepreneur"
-    },
-    "cities": {
-      "douala": "Douala",
-      "bafoussam": "Bafoussam"
-    }
-  }
+          "testimonial_1": "Through the business grant support program by She Thrive International, I received the support and encouragement I needed to turn my vision into reality With the grant, I successfully launched ENJECK FARMS — a growing poultry business committed to providing accessible, high-quality, locally produced poultry products.I am deeply grateful to She Thrive International for believing in my dream and giving me the platform to build a sustainable future.",
+          "testimonial_2": "Dependence on external validation and the need for acceptance are psychological mechanisms in which self-esteem relies on the approval of others rather than on internal self-evaluation. Although it is natural to seek recognition, excessive dependence can become a major obstacle to personal growth and may reveal low self-esteem.",
+          "testimonial_3": "I went from selling snacks to running an online boutique with customers across Cameroon. SHE Thrive didn't just train me – they believed in me they believed in me when I didn't believe in myself.",
+          "roles": {
+            "stacy": "Empower HER Graduate · Owner of ENJECK FARMS",
+            "maureen": "Nation Builders Fellow · Community Health Advocate",
+            "patience": "Empower HER Graduate · Digital Entrepreneur"
+          },
+          "cities": {
+            "douala": "Douala",
+            "bafoussam": "Bafoussam"
+          }
+        }
       },
 
-      // ── NAVBAR SECTION ─────────────────────────────────────────────
+      // NAVBAR SECTION
       "navbar": {
         "sub_logo": "International",
         "btn_join": "Join Now",
@@ -625,71 +662,95 @@ const resources = {
         }
       },
 
-      // ── PROGRAMS SECTION ───────────────────────────────────────────
+      // PROGRAMS SECTION
       "programs": {
         "top_label": "What We Offer",
         "title": "Our Programs",
-        "subtitle": "Every program is designed to meet women where they are — and take them further than they imagined possible.",
+        "subtitle": "Each program is designed to meet women right where they are — and take them further than they ever imagined.",
         "not_sure": "Not sure which program is right for you?",
-        "btn_team": "Talk to Our Team",
-        "btn_join": "Join",
+        "btn_team": "Chat with our team",
+        "btn_join": "Join Now",
         "items": {
           "empower_her": {
+            "tagline": "<span class='text-pink-400 font-pink'> Our vision <br/></span> A world where every woman and girl has the skills, opportunities, confidence, resources and leadership capacity to achieve economic independence and create lasting change in her family and community.",
             "title": "Empower HER",
-            "tagline": "Equipping women with Skills for life and Income.",
-            "desc": "Empower HER is the practical empowerment arm of SHE Thrive focused on training, equipping, and activating women.",
-            "audience": "Women ready to grow, earn, and build a better future.",
+            "desc": "<span class='text-purple-700 font-pink'> Our mission <br/></span> To empower women and girls through education, entrepreneurship, leadership development, digital innovation, financial inclusion and career advancement programmes that enable them to thrive economically and socially.",
+            "audience": "Equiping women. Unlocking opportunities. Transforming futures.",
             "outcomes": [
-              "Skills acquisition programs",
-              "Business & Entrepreneurship training",
-              "Workshops and Conferences",
-              "Personal development Sessions",
+              "Improve women's employability and workforcereadiness.",
+              "Increase women-owned businesses and enterprises.",
+              "Expand access to financial inclusion.",
+              "Promote digital literacy and innovation.",
+              "Strengthen women in leadership and decision-making.",
+              "Support youth and adolescent girl's empowerment.",
+              "Increase economic resilience among vulnerable women.",
+              "Create pathways to decent work and income generation."
             ]
           },
           "nation_builders": {
             "title": "Nation Builders",
-            "tagline": "Raising a Strong Community of Women Who Stand Together.",
-            "desc": "Designed to build future leaders and entrepreneurs to make a lasting, transformational impact across their communities.",
-            "audience": "Women who need support, healing, connection, and spiritual growth.",
+            "tagline": "<span class='text-purple-700 font-pink'> Our vision <br/></span> A society where individuals, families and communities are empowored with values, leadership capacity, resilience and social responsibility to drive sustainable transformation",
+            "desc": "<span class='text-pink-400 font-pink'> Our mission <br/></span> To strengthen individuals, families and communities through mentorship, values-based, psychosocial support, civic engagement and community developpement programmes that foster resilience, social cohesion and positive societal change.",
+            "audience": "Building people. Strengthening families. Transforming communities.",
             "outcomes": [
-              "Prayer and spiritual support systems",
-              "Counseling and mentorship",
-              "Community groups and accountability circles",
-              "Emotional and life support",
+              "Strengthen family wellbeing and stability.",
+              "Develop ethical and transformational leaders.",
+              "Promote social cohesion and community resilience.",
+              "Expand mentorship and life skills opportunities.",
+              "Support your development and positive citizenship.",
+              "Enhance psychocosocial and emotional wellbeing.",
+              "Promote peacebuilding and conflict prevention.",
+              "Build strong community support networks."
+            ]
+          },
+          "Wellness_For_Life": {
+            "title": "Wellness for Life",
+            "tagline": "<span class='text-pink-400 font-pink'> Our vision <br/></span> A world where women, girls, families and communities enjoy optimal health, wellbeing and access to quality healthcare services.",
+            "desc": "<span class='text-purple-700 font-pink'> Our mission <br/></span> To improve health outcomes and wellbeing through community-based health education, preventive healthcare, mental wellness support, nutrition interventions, and strategic partnerships that empower communities to thrive.",
+            "audience": "Healthy Women, Strong Families, Thriving Communities",
+            "outcomes": [
+              "Improve access to quality health information.",
+              "Increase preventive healthcare pratices.",
+              "Promote mental health and psychosocial wellbeing.",
+              "Strengthen maternal and reproductive health.",
+              "Improve nutrition and food security.",
+              "Support healthy ageing and elderly care.",
+              "Reduce preventale diseases.",
+              "Strengthen community health systems."
             ]
           }
         }
       },
 
-      // ── WHAT WE DO SECTION ──────────────────────────────────────────
+      // WHAT WE DO SECTION
       "whatwedo": {
         "eyebrow": "What We Do",
         "title_main": "Three Pillars of ",
         "title_italic": "Transformation",
-        "subtitle": "Every service we offer is built around one conviction: women thrive when they have the right support at the right time.",
+        "subtitle": "Every service we offer is built on one conviction: women thrive when they have the right support at the right time.",
         "services": {
           "consulting": {
             "tag": "01 / Consulting & Coaching",
-            "headline": "Build, Lead, and Scale with Clarity",
-            "description": "Business consulting, leadership coaching, financial guidance, and personal development — all designed to move you from where you are to where you're meant to be.",
+            "headline": "Build, Lead, and Grow with Clarity",
+            "description": "Business consulting, leadership coaching, financial guidance, and personal development — all tailored to get you where you need to be.",
             "audience": "Entrepreneurs · Women Leaders · Startups · NGOs",
-            "cta": "Book a Strategy Session"
+            "cta": "Book a Strategic Session"
           },
           "jobs": {
             "tag": "02 / Thrive Jobs",
-            "headline": "Access Opportunities That Change Your Life",
-            "description": "Connect to verified job offers, internships, and skill-based gigs through our curated network and placement programs.",
+            "headline": "Access Life-Changing Opportunities",
+            "description": "Connect with verified job openings, internships, and skill-based gigs through our curated network and talent placement programs.",
             "categories": {
               "jobs": "Jobs",
               "internships": "Internships",
-              "gigs": "Skill-based Gigs"
+              "gigs": "Freelance gigs"
             },
             "cta": "Explore Opportunities"
           },
           "counseling": {
-            "tag": "03 / Counseling & Prayers",
-            "headline": "Emotional Support & Spiritual Guidance",
-            "description": "One-on-one counseling, life guidance, and prayer support for women and individuals navigating life's hardest moments.",
+            "tag": "03 / Listening & Prayers",
+            "headline": "Emotional Support & Guidance",
+            "description": "One-on-one biblical counseling, life guidance, and prayer support for women and individuals navigating life's toughest seasons.",
             "reassurance": "Confidential. Compassionate. Judgment-free.",
             "cta": "Request a Session"
           }
@@ -698,7 +759,7 @@ const resources = {
 
       // ── EVENTS SECTION ─────────────────────────────────────────────
       "events": {
-        "eyebrow": "What's Coming",
+        "eyebrow": "What's Happening",
         "title": "Upcoming Events",
         "subtitle": "Join us at our events — where women gather to learn, grow, lead, and thrive together.",
         "categories": {
@@ -706,19 +767,19 @@ const resources = {
           "training": "Training",
           "meetup": "Meetup"
         },
-        "notify_text": "Want to be notified of future events?",
-        "btn_notify": "Get Notified",
+        "notify_text": "Want to be notified about our next events?",
+        "btn_notify": "Stay Updated",
         "btn_register": "Register",
         "items": {
           "conference_en": {
-            "title": "REGISTRATION SHE THRIVE CONFERENCE (English)",
+            "title": "SHE THRIVE CONFERENCE REGISTRATION (English)",
             "location": "Douala",
-            "description": "7 powerful voices. 7 transformational sessions. Can you guess who they are ? Stay tuned... the reveal begins soon."
+            "description": "7 powerful voices. 7 transformational sessions. Can you guess who they are? Stay connected... the reveals begin soon."
           },
           "conference_fr": {
-            "title": "REGISTRATION SHE THRIVE CONFERENCE (French)",
+            "title": "SHE THRIVE CONFERENCE ENREGISTREMENT (French)",
             "location": "Douala",
-            "description": "7 powerful voices. 7 transformational sessions. Can you guess who they are ? Stay tuned... the reveal begins soon."
+            "description": "7 powerful voices. 7 transformational sessions. Can you guess who they are? Stay connected... the reveals begin soon."
           }
         }
       }

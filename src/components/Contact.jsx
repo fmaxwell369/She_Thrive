@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, MessageCircle, Send, CheckCircle } from 'lucide-re
 import Button from './Button'
 
 const offices = [
-  { city: 'Douala', address: 'Makepe, Carrefour Rhone Poulenc', phone: '+237 650 69 00 59', email: 'info@shethrivecm.org' },
+  { city: 'Douala', address: 'Makepe, Carrefour Rhone Poulenc', phone: '+237 650 69 00 59', email: 'www.shethriveinternational.org' },
 ]
 
 const Contact = () => {
@@ -17,8 +17,8 @@ const Contact = () => {
   const set = (k, v) => setForm(f => ({ ...f, [k]: v }))
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); 
-    setLoading(true); 
+    e.preventDefault();
+    setLoading(true);
 
     try {
       const response = await fetch("https://formspree.io/f/xpqnyvdn", {
@@ -35,8 +35,8 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        setSent(true); 
-        setForm({ name: '', email: '', subject: '', message: '' }); 
+        setSent(true);
+        setForm({ name: '', email: '', subject: '', message: '' });
       } else {
         alert("Une erreur est survenue lors de l'envoi.");
       }

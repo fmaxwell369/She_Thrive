@@ -34,7 +34,7 @@ const Programs = () => {
           </div>
 
           {/* Cards grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto animate-on-scroll">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto animate-on-scroll">
             {programs.map((program) => (
               <ProgramCard key={program.id} program={program} onJoin={handleJoin} />
             ))}

@@ -6,6 +6,8 @@ import conf_7 from '../assets/conf_7.png';
 import conf_8 from '../assets/conf_8.png';
 import conf_5 from '../assets/conf_5.png';
 import conf_6 from '../assets/conf_6.png';
+import she_thrive_1 from '../assets/she_thrive_1.jpeg';
+import she_thrive_2 from '../assets/she_thrive_2.jpeg';
 
 
 /* ── Programs ─────────────────────────────────────────────────── */
@@ -21,14 +23,18 @@ export const programs = [
       'programs.items.empower_her.outcomes.0',
       'programs.items.empower_her.outcomes.1',
       'programs.items.empower_her.outcomes.2',
-      'programs.items.empower_her.outcomes.3'
+      'programs.items.empower_her.outcomes.3',
+      'programs.items.empower_her.outcomes.4',
+      'programs.items.empower_her.outcomes.5',
+      'programs.items.empower_her.outcomes.6',
+      'programs.items.empower_her.outcomes.7'
     ],
     
-    image: 'https://images.unsplash.com/photo-1607748862156-7c548e7e98f4?w=600&q=80',
+    image: she_thrive_2,
     color: 'purple',
     icon: '✦',
   },
-  {    
+  {
     id: 'nation-builders',
     titleKey: 'programs.items.nation_builders.title',
     descKey: 'programs.items.nation_builders.desc',
@@ -40,13 +46,38 @@ export const programs = [
       'programs.items.nation_builders.outcomes.0',
       'programs.items.nation_builders.outcomes.1',
       'programs.items.nation_builders.outcomes.2',
-      'programs.items.nation_builders.outcomes.3'
+      'programs.items.nation_builders.outcomes.3',
+      'programs.items.nation_builders.outcomes.4',
+      'programs.items.nation_builders.outcomes.5',
+      'programs.items.nation_builders.outcomes.6',
+      'programs.items.nation_builders.outcomes.7'
     ],
-    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80',
-    icon: '◆',
+    image: conf_3,
+    icon: '✦',
     color: 'pink',
   },
-]
+  {
+    id: 'Wellness_For_Life',
+    titleKey: 'programs.items.Wellness_For_Life.title',
+    taglineKey: 'programs.items.Wellness_For_Life.tagline',
+    descKey: 'programs.items.Wellness_For_Life.desc',
+    audienceKey: 'programs.items.Wellness_For_Life.audience',
+    outcomesKeys: [
+      'programs.items.Wellness_For_Life.outcomes.0',
+      'programs.items.Wellness_For_Life.outcomes.1',
+      'programs.items.Wellness_For_Life.outcomes.2',
+      'programs.items.Wellness_For_Life.outcomes.3',
+      'programs.items.Wellness_For_Life.outcomes.4',
+      'programs.items.Wellness_For_Life.outcomes.5',
+      'programs.items.Wellness_For_Life.outcomes.6',
+      'programs.items.Wellness_For_Life.outcomes.7'
+    ],
+    image: she_thrive_1,
+    icon: '✦',
+    color: 'purple',
+  }
+];
+
 
 /* ── Impact stats ─────────────────────────────────────────────── */
 export const impactStats = [
@@ -61,16 +92,16 @@ export const testimonials = [
   {
     id: 1,
     name: 'Stacy',
-    roleKey: 'impact.quotes.roles.stacy',      
-    quoteKey: 'impact.quotes.testimonial_1',    
+    roleKey: 'impact.quotes.roles.stacy',
+    quoteKey: 'impact.quotes.testimonial_1',
     image: tes_1,
     city: 'impact.quotes.cities.douala',
   },
   {
     id: 2,
     name: 'Maureen',
-    roleKey: 'impact.quotes.roles.maureen',     
-    quoteKey: 'impact.quotes.testimonial_2',    
+    roleKey: 'impact.quotes.roles.maureen',
+    quoteKey: 'impact.quotes.testimonial_2',
     image: test_2,
     city: 'impact.quotes.cities.douala',
   },
@@ -78,7 +109,7 @@ export const testimonials = [
     id: 3,
     name: 'Patience Eboule',
     roleKey: 'impact.quotes.roles.patience',
-    quoteKey: 'impact.quotes.testimonial_3',    
+    quoteKey: 'impact.quotes.testimonial_3',
     image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80',
     city: 'impact.quotes.cities.bafoussam',
   },
@@ -87,8 +118,8 @@ export const testimonials = [
 export const blogPosts = [
   {
     id: 1,
-    title: '5 Ways Women-Led Businesses Are Transforming Cameroon',
-    excerpt: 'Across Yaoundé and Douala, a new generation of women entrepreneurs is rewriting the rules of business — and the economy is taking notice.',
+    titleKey: 'blog.posts.1.title',
+    excerptKey: 'blog.posts.1.excerpt',
     date: 'Feb 12, 2025',
     category: 'Entrepreneurship',
     readTime: '4 min',
@@ -96,8 +127,8 @@ export const blogPosts = [
   },
   {
     id: 2,
-    title: 'Why Leadership Training for Women Matters More Than Ever',
-    excerpt: 'Research consistently shows that when women lead, communities thrive. Here\'s what our Nation Builders program is doing to close the gender leadership gap.',
+    titleKey: 'blog.posts.2.title',
+    excerptKey: 'blog.posts.2.excerpt',
     date: 'Jan 28, 2025',
     category: 'Leadership',
     readTime: '5 min',
@@ -105,8 +136,8 @@ export const blogPosts = [
   },
   {
     id: 3,
-    title: 'Meet the Women Building Businesses From Scratch',
-    excerpt: 'Three graduates from our Empower HER program share their journeys from uncertainty to confidence — and what\'s next for their growing ventures.',
+    titleKey: 'blog.posts.3.title',
+    excerptKey: 'blog.posts.3.excerpt',
     date: 'Jan 10, 2025',
     category: 'Stories',
     readTime: '6 min',

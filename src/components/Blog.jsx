@@ -54,15 +54,15 @@ const Blog = () => {
                 <div className="flex items-center gap-3 mb-4">
                   {/* Traduction dynamique de la catégorie */}
                   <span className={`text-xs font-medium px-3 py-1 rounded-full ${categoryColors[post.category] || 'bg-gray-100 text-gray-600'}`}>
-                    {t(`blog.categories.${post.category}`, post.category)} 
+                    {t(`blog.categories.${post.category}`, post.category)}
                   </span>
                   <span className="flex items-center gap-1 text-xs text-gray-400">
                     <Clock size={11} /> {post.readTime} {t('blog.read')}
                   </span>
                 </div>
                 {/* Note : Si tes posts dans data.js n'ont pas de versions traduites, ils afficheront le titre par défaut */}
-                <h3 className="font-serif text-xl font-bold text-gray-900 mb-3 leading-snug">{post.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-5">{post.excerpt}</p>
+                <h3 className="font-serif text-xl font-bold text-gray-900 mb-3 leading-snug">{t(post.titleKey)}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-5">{t(post.excerptKey)}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-gray-400">{post.date}</span>
                   <a href="#" className="text-purple-600 hover:text-pink-600 text-sm font-medium flex items-center gap-1 transition-colors">
