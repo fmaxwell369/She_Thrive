@@ -10,7 +10,7 @@ import she_thrive_1 from '../assets/she_thrive_1.jpeg';
 import she_thrive_2 from '../assets/she_thrive_2.jpeg';
 
 
-/* ── Programs ─────────────────────────────────────────────────── */
+/* Programs */
 export const programs = [
   {
     id: 'empower-her',
@@ -79,7 +79,7 @@ export const programs = [
 ];
 
 
-/* ── Impact stats ─────────────────────────────────────────────── */
+/* Impact stats */
 export const impactStats = [
   { value: 500, suffix: '+', labelKey: 'impact.labels.trained', icon: '👩‍🎓' },
   { value: 100, suffix: '+', labelKey: 'impact.labels.businesses', icon: '💼' },
@@ -87,7 +87,7 @@ export const impactStats = [
   { value: 98,  suffix: '%', labelKey: 'impact.labels.satisfaction', icon: '✨' },
 ];
 
-/* ── Testimonials ─────────────────────────────────────────────── */
+/* Testimonials */
 export const testimonials = [
   {
     id: 1,
@@ -114,7 +114,7 @@ export const testimonials = [
     city: 'impact.quotes.cities.bafoussam',
   },
 ];
-/* ── Blog posts ───────────────────────────────────────────────── */
+/* Blog posts */
 export const blogPosts = [
   {
     id: 1,
@@ -145,7 +145,7 @@ export const blogPosts = [
   },
 ]
 
-/* ── Gallery images ───────────────────────────────────────────── */
+/* Gallery images */
 export const galleryImages = [
   { id: 1, src: conf_1, alt: 'Women in training workshop' },
   { id: 2, src: conf_3, alt: 'Leadership session' },
