@@ -121,8 +121,9 @@ const resources = {
         "programs_list": {
           "p1": "Empower HER",
           "p2": "Bâtisseurs de Nation",
-          "p3": "Parrainer une femme",
-          "p4": "Devenir bénévole"
+          "p3": "Bien-etre Pour La Vie",
+          "p4": "Parrainer une femme",
+          "p5": "Devenir bénévole"
         },
         "rights": "Tous droits réservés."
       },
@@ -514,8 +515,9 @@ const resources = {
         "programs_list": {
           "p1": "Empower HER",
           "p2": "Nation Builders",
-          "p3": "Sponsor a Woman",
-          "p4": "Volunteer"
+          "p3":"Wellness For Life",
+          "p4": "Sponsor a Woman",
+          "p5": "Volunteer"
         },
         "rights": "All rights reserved."
       },

@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, MessageCircle, Send, CheckCircle } from 'lucide-re
 import Button from './Button'
 
 const offices = [
-  { city: 'Douala', address: 'Makepe, Carrefour Rhone Poulenc', phone: '+237 650 69 00 59', email: 'www.shethriveinternational.org' },
+  { city: 'Douala', address: 'Makepe, Carrefour Rhone Poulenc', phone: '+237 650 69 00 59', email: 'Info@shethriveinternational.org' },
 ]
 
 const Contact = () => {

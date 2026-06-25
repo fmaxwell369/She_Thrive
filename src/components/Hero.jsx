@@ -148,9 +148,9 @@ const Hero = () => {
                   onClick={() => setCurrentVideoIndex(index)}
                   // CHANGEMENT : Remplacement de w-12 h-12 par w-9 h-9 (plus petit)
                   className={`relative w-9 h-9 rounded-full overflow-hidden transition-all duration-300 focus:outline-none group ${
-                    index === currentVideoIndex 
+                    index === currentVideoIndex
                       ? 'ring-2 ring-pink-500 ring-offset-2 ring-offset-purple-950 scale-105 shadow-md' 
-                      : 'opacity-60 hover:opacity-100' 
+                      : 'opacity-60 hover:opacity-100'
                   }`}
                   aria-label={`Regarder la vidéo ${index + 1}`}
                 >

@@ -27,6 +27,7 @@ const Footer = () => {
     'footer.programs_list.p2',
     'footer.programs_list.p3',
     'footer.programs_list.p4',
+    'footer.programs_list.p5',
   ]
 
   const socials = [
@@ -47,21 +48,29 @@ const Footer = () => {
 
   return (
     <>
-    {/* Partners Section */}
-      <div className="bg-gray-50 py-12 px-4">
-        <div className="container-max px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-3xl font-bold uppercase tracking-widest text-purple-700 mb-8">
+       {/* Partners Section */}
+    <div className="bg-gray-50 py-12 px-4">
+      <div className="container-max px-4 sm:px-6 lg:px-8">
+        <h2 className="font-serif text-4xl sm:text-5xl font-bold text-purple-950 text-center mb-8">
             {t('footer.partners.title')}
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-10">
-            <img src={partner1} alt="Partner 1" className="h-20 object-contain transition duration-300" />
-            <img src={partner2} alt="Partner 2" className="h-20 object-contain transition duration-300" />
-            <img src={partner3} alt="Partner 3" className="h-20 object-contain transition duration-300" />
-            <img src={partner4} alt="Partner 4" className="h-20 object-contain transition duration-300" />
-            <img src={partner5} alt="Partner 5" className="h-20 object-contain transition duration-300" />
-          </div>
-        </div>
+        </h2>
+    <div className="flex flex-wrap items-center justify-center gap-10">
+      <a href="https://www.mankisglobal.com" target="_blank" rel="noopener noreferrer">
+        <img src={partner1} alt="Partner 1" className="h-20 object-contain transition duration-300 hover:opacity-80" />
+      </a>
+        <img src={partner2} alt="Partner 2" className="h-20 object-contain transition duration-300 hover:opacity-80" />
+      
+      <a href="https://helepapp.tech/download" target="_blank" rel="noopener noreferrer">
+        <img src={partner3} alt="Partner 3" className="h-20 object-contain transition duration-300 hover:opacity-80" />
+      </a>
+      <a href="https://www.tamentalhealthservice.com" target="_blank" rel="noopener noreferrer">
+        <img src={partner4} alt="Partner 4" className="h-20 object-contain transition duration-300" />
+      </a>
+    
+  <img src={partner5} alt="Partner 5" className="h-20 object-contain transition duration-300" />
+</div>
       </div>
+    </div>
 
       <footer className="bg-purple-950 text-white">
         {/* Main footer */}
@@ -140,7 +149,7 @@ const Footer = () => {
                 </li>
                 <li className="flex gap-2.5 items-center text-sm text-white/60">
                   <Mail size={15} className="text-pink-500 shrink-0" />
-                  info@shethrivecm.org
+                  info@shethriveinternational.org
                 </li>
                 <li className="flex gap-2.5 items-center text-sm text-white/60">
                   <Phone size={15} className="text-pink-500 shrink-0" />
