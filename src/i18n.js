@@ -30,6 +30,16 @@ const resources = {
 
       // ── BLOG SECTION ───────────────────────────────────────────────
       "blog": {
+        "top_label": "Notre Blog",
+  "title": "Dernières Actualités",
+  "view_all": "Voir tout",
+  "read": "de lecture",
+  "read_more": "Lire la suite",
+  "categories": {
+    "Entrepreneurship": "Entrepreneuriat",
+    "Leadership": "Leadership",
+    "Stories": "Témoignages"
+  },
   "posts": {
     "1": {
       "title": "5 façons dont les entreprises dirigées par des femmes transforment le Cameroun",
@@ -421,7 +431,17 @@ const resources = {
 
       // ── BLOG SECTION ───────────────────────────────────────────────
       "blog": {
-  "posts": {
+        "top_label": "From Our Blog",
+        "title": "Latest Insights",
+        "view_all": "View All",
+        "read": "read",
+        "read_more": "Read More",
+      "categories": {
+        "Entrepreneurship": "Entrepreneurship",
+        "Leadership": "Leadership",
+        "Stories": "Stories"
+  },
+        "posts": {
     "1": {
       "title": "5 Ways Women-Led Businesses Are Transforming Cameroon",
       "excerpt": "Across Yaoundé and Douala, a new generation of women entrepreneurs is rewriting the rules of business — and the economy is taking notice."
